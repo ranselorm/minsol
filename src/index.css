@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  background-color: #edf2f7;
+}
+
+@layer utilities {
+  .section-title {
+    @apply text-4xl font-bold text-blue-800 mb-8;
+  }
+}
