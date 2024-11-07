@@ -2,13 +2,14 @@
 import React, { useState, useEffect } from "react";
 import { Icon } from "@iconify/react";
 import SideDrawer from "./SideDrawer";
+import { Link } from "react-router-dom";
 
 const links = [
   {
     label: "Solutions",
     subItems: ["ME FIT Programs", "Products and Services", "Mining 4.0"],
   },
-  { label: "About Us" },
+  { label: "About Us", path: "/about" },
   { label: "Case Studies" },
   { label: "Sustainability" },
   { label: "Investors" },
@@ -51,13 +52,17 @@ const Navbar: React.FC = () => {
   return (
     <nav className="bg-blue-800 text-white py-4 px-4 md:px-32">
       <div className="flex justify-between items-center">
-        <div className="text-2xl font-bold">ME Elecmetal</div>
+        <Link to="/">Logo</Link>
         {/* Desktop Nav Links and Icons */}
         <div className="hidden md:flex items-center space-x-4">
           {links.map((link, index) => (
-            <span key={index} className="hidden md:inline-block">
+            <Link
+              to={`${link.path}`}
+              key={index}
+              className="hidden md:inline-block"
+            >
               {link.label}
-            </span>
+            </Link>
           ))}
           {/* Menu Icon for Desktop Side Drawer */}
         </div>
