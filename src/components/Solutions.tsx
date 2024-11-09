@@ -33,7 +33,7 @@ const solutions = [
 
 const Solutions: React.FC = () => {
   return (
-    <section className="py-16 px-4 md:px-32 bg-white">
+    <section className="py-16 px-4 md:px-28 bg-white">
       <h2 className="section-title">Solutions</h2>
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
         {solutions.map((solution, index) => (

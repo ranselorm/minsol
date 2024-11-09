@@ -6,7 +6,7 @@ const AboutLayout: React.FC = () => {
   return (
     <div className="">
       {/* Sub-navigation bar */}
-      <nav className="bg-main py-4 flex justify-between px-4 md:px-32 text-gray-100">
+      <nav className="bg-main py-4 flex justify-between px-4 md:px-28 text-gray-100">
         <h3>About Us</h3>
         <div className="flex space-x-6">
           <NavLink

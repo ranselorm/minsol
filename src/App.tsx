@@ -7,6 +7,8 @@ import History from "./pages/History";
 import PlantsAndOfficesPage from "./pages/PlantsAndOfficesPage";
 import Compliance from "./pages/Compliance";
 import Affiliates from "./pages/Affiliates";
+import CaseStudy from "./pages/CaseStudy";
+import Sustainability from "./pages/Sustainability";
 
 function App() {
   return (
@@ -20,6 +22,9 @@ function App() {
           <Route path="compliance" element={<Compliance />} />
           <Route path="affiliates" element={<Affiliates />} />
         </Route>
+
+        <Route path="/case-study" element={<CaseStudy />} />
+        <Route path="/sustainability" element={<Sustainability />} />
         <Route path="/contact" element={<Contact />} />
         {/* <Route path="*" element={<NotFound />} /> */}
       </Routes>

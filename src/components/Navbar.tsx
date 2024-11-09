@@ -10,9 +10,9 @@ const links = [
     subItems: ["ME FIT Programs", "Products and Services", "Mining 4.0"],
   },
   { label: "About Us", path: "/about" },
-  { label: "Case Studies" },
-  { label: "Sustainability" },
-  { label: "Investors" },
+  { label: "Case Studies", path: "/case-study" },
+  { label: "Sustainability", path: "sustainability" },
+  { label: "Investors", path: "investors" },
 ];
 
 const Navbar: React.FC = () => {
@@ -50,7 +50,7 @@ const Navbar: React.FC = () => {
   };
 
   return (
-    <nav className="bg-blue-800 text-white py-4 px-4 md:px-32">
+    <nav className="bg-blue-800 text-white py-4 px-4 md:px-28">
       <div className="flex justify-between items-center">
         <Link to="/">Logo</Link>
         {/* Desktop Nav Links and Icons */}

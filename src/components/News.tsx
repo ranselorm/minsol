@@ -31,7 +31,7 @@ const newsItems = [
 
 const News: React.FC = () => {
   return (
-    <section className="py-8 px-4 md:px-32 bg-">
+    <section className="py-8 px-4 md:px-28 bg-">
       <div className="flex justify-between items-center mb-8">
         <h2 className="section-title">News</h2>
         <Link

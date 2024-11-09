@@ -29,7 +29,7 @@ const experiences = [
 
 const Experience: React.FC = () => {
   return (
-    <section className="py-8 px-4 md:px-32 bg-blue-50">
+    <section className="py-8 px-4 md:px-28 bg-blue-50">
       <div className="flex justify-between items-center mb-8">
         <h2 className="section-title">Unlock Insights from Our Experience</h2>
         <Link
