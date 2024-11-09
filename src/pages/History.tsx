@@ -49,7 +49,7 @@ const History: React.FC = () => {
   return (
     <div className="bg-white">
       <div className="px-4 md:px-28 mx-auto">
-        <header className=" p-8 mx-auto flex flex-col items-center">
+        <header className="py-8 mx-auto flex flex-col items-center">
           <p className="text-grey max-w-2xl text-left my-12 text-base">
             With over 100 years of history, our long journey has proven us to be
             a very reliable company. Alongside our associates we have met
