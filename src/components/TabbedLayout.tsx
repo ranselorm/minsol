@@ -41,7 +41,7 @@ const TabbedLayout: React.FC = () => {
   const [selectedTab, setSelectedTab] = useState<string>("Board of Directors");
 
   return (
-    <div className="px-4 py-8 md:px-28">
+    <div className="px-4 py-8 md:px-28 h-[100vh]">
       {/* Tabs */}
       <div className="flex space-x-4 mb-6 border-b border-gray-300 pb-2">
         {Object.keys(committees).map((tab) => (

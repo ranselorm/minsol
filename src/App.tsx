@@ -4,7 +4,7 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import AboutLayout from "./components/AboutLayout";
 import History from "./pages/History";
-import PlantsAndOffices from "./pages/PlantsAndOffices";
+import PlantsAndOfficesPage from "./pages/PlantsAndOfficesPage";
 import Compliance from "./pages/Compliance";
 import Affiliates from "./pages/Affiliates";
 
@@ -16,7 +16,7 @@ function App() {
         <Route path="about" element={<AboutLayout />}>
           <Route path="/about" element={<About />} />
           <Route path="history" element={<History />} />
-          <Route path="plants-and-offices" element={<PlantsAndOffices />} />
+          <Route path="plants-and-offices" element={<PlantsAndOfficesPage />} />
           <Route path="compliance" element={<Compliance />} />
           <Route path="affiliates" element={<Affiliates />} />
         </Route>
