@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Outlet, useLocation } from "react-router-dom";
 import InvestorsCard from "../components/InvestorsCard";
+import Consultant from "../components/Consultant";
 
 const sections = [
   {
@@ -15,7 +16,7 @@ const sections = [
     imageSrc: "/images/c2.jpg",
     title: "Corporate affairs",
     description: "All financial documentation updated throughout the year.",
-    linkUrl: "#",
+    linkUrl: "corporate-affairs",
     bgColor: "bg-white", // White background
     reverse: true, // Reversed layout
   },
@@ -24,23 +25,26 @@ const sections = [
     title: "Contact for investors",
     description:
       "Information for interested investors about the Elecmetal Group.",
-    linkUrl: "#",
+    linkUrl: "investors-contact",
     bgColor: "bg-gray-100", // Light gray background
     reverse: false, // Default layout
   },
-  {
-    imageSrc: "/images/c4.jpg",
-    title: "Compliance",
-    description:
-      "Find all our documentation of practices, policies, manuals, among others.",
-    linkUrl: "#",
-    bgColor: "bg-white", // White background
-    reverse: true, // Reversed layout
-  },
+  // {
+  //   imageSrc: "/images/c4.jpg",
+  //   title: "Compliance",
+  //   description:
+  //     "Find all our documentation of practices, policies, manuals, among others.",
+  //   linkUrl: "about/compliance",
+  //   bgColor: "bg-white", // White background
+  //   reverse: true, // Reversed layout
+  // },
 ];
 
 const Investors: React.FC = () => {
   const location = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div>
@@ -60,6 +64,7 @@ const Investors: React.FC = () => {
           ))}
         </>
       )}
+      <Consultant />
     </div>
   );
 };

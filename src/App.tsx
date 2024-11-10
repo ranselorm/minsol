@@ -11,6 +11,8 @@ import CaseStudy from "./pages/CaseStudy";
 import Sustainability from "./pages/Sustainability";
 import Investors from "./pages/Investors";
 import AnnualReports from "./pages/AnnualReports";
+import CorporateAffairs from "./pages/CorporateAffairs";
+import InvestorContact from "./pages/InvestorsContact";
 
 function App() {
   return (
@@ -28,7 +30,9 @@ function App() {
         <Route path="case-study" element={<CaseStudy />} />
         <Route path="sustainability" element={<Sustainability />} />
         <Route path="investors" element={<Investors />}>
-          <Route path="annual-reports" element={<AnnualReports />}></Route>
+          <Route path="annual-reports" element={<AnnualReports />} />
+          <Route path="corporate-affairs" element={<CorporateAffairs />} />
+          <Route path="investors-contact" element={<InvestorContact />} />
         </Route>
 
         <Route path="/contact" element={<Contact />} />
