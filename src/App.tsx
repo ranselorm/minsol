@@ -13,12 +13,17 @@ import Investors from "./pages/Investors";
 import AnnualReports from "./pages/AnnualReports";
 import CorporateAffairs from "./pages/CorporateAffairs";
 import InvestorContact from "./pages/InvestorsContact";
+import Solutions from "./pages/Solutions";
+import MeFitGrinding from "./pages/MeFitGrinding";
 
 function App() {
   return (
     <>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="solutions" element={<Solutions />}>
+          <Route path="me-fit-grinding" element={<MeFitGrinding />} />
+        </Route>
         <Route path="about" element={<AboutLayout />}>
           <Route path="/about" element={<About />} />
           <Route path="history" element={<History />} />
