@@ -1,28 +1,28 @@
-// components/FlexCard.tsx
+// components/InvestorsCard.tsx
 import React from "react";
+import { Link } from "react-router-dom";
 
-interface FlexCardProps {
+interface InvestorsCardProps {
   imageSrc: string;
   title: string;
   description: string;
-  linkText: string;
   linkUrl: string;
   bgColor?: string; // Optional background color
   reverse?: boolean; // Optional reverse layout
 }
 
-const FlexCard: React.FC<FlexCardProps> = ({
+const InvestorsCard: React.FC<InvestorsCardProps> = ({
   imageSrc,
   title,
   description,
-  linkText,
+
   linkUrl,
   bgColor = "bg-gray-100",
   reverse = false,
 }) => {
   return (
     <section
-      className={`py-16 px-4 md:px-28 flex flex-col md:flex-row ${
+      className={`py-8 px-4 md:px-28 flex flex-col md:flex-row ${
         reverse ? "md:flex-row-reverse" : ""
       } ${bgColor}`}
     >
@@ -30,7 +30,7 @@ const FlexCard: React.FC<FlexCardProps> = ({
         <img
           src={imageSrc}
           alt={title}
-          className="w-full h-auto object-cover rounded-lg"
+          className="w-full h-[300px] object-cover rounded-lg"
         />
       </div>
       <div className="flex-1 flex flex-col justify-center md:pl-12">
@@ -38,15 +38,15 @@ const FlexCard: React.FC<FlexCardProps> = ({
           {title}
         </h2>
         <p className="text-grey mb-6">{description}</p>
-        <a
-          href={linkUrl}
-          className="text-orange-500 font-semibold inline-flex items-center hover:underline"
+        <Link
+          to={linkUrl}
+          className="text-orange-500 font-semibold inline-flex items-center hover:underline capitalize"
         >
-          {linkText} &rarr;
-        </a>
+          More information &rarr;
+        </Link>
       </div>
     </section>
   );
 };
 
-export default FlexCard;
+export default InvestorsCard;

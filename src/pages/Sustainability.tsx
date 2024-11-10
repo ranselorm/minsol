@@ -6,6 +6,7 @@ import Signature from "../components/Signature";
 import Message from "../components/Message";
 import SustainabilityCard from "../components/SustainabilityCard";
 import Consultant from "../components/Consultant";
+import News from "../components/News";
 
 const sections = [
   {
@@ -77,6 +78,7 @@ const Sustainability: React.FC = () => {
           reverse={section.reverse}
         />
       ))}
+      <News />
       <Consultant />
     </section>
   );
