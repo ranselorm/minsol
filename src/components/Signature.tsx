@@ -36,7 +36,7 @@ const Signature: React.FC = () => {
           <img
             src="/images/sello.jpg"
             alt="ME Elecmetal Signature"
-            className="w-full rounded-lg shadow-lg"
+            className="w-full h-[65vh] rounded-lg object-cover"
           />
         </div>
       </div>
