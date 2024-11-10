@@ -4,17 +4,55 @@ import { Icon } from "@iconify/react";
 import SideDrawer from "./SideDrawer";
 import { Link } from "react-router-dom";
 
+const dropdownData = [
+  {
+    title: "ME FIT Programs",
+    items: [
+      {
+        name: "ME FIT Grinding",
+        description:
+          "We offer integral and technical solutions to help our customers tackle the unique challenges at each mining operation and to positively impact priority KPIs: tons per hour, safety management, availability and maintainability of equipment, risk prevention, among others.",
+        link: "/solutions/me-fit-grinding",
+      },
+      {
+        name: "ME FIT Crushing",
+        description:
+          "We design solutions to help our customers achieve their goals by combining crusher wear parts with technology tools, advice, training and monitoring — all of which allow us to create value in our customers’ processes.",
+        link: "/solutions/me-fit-crushing",
+      },
+    ],
+  },
+  {
+    title: "Products and Services",
+    items: [
+      {
+        name: "Crushing",
+        description: "Description for Crushing",
+        link: "/solutions/crushing",
+      },
+      {
+        name: "Grinding",
+        description: "Description for Grinding",
+        link: "/solutions/grinding",
+      },
+      {
+        name: "Grinding Media",
+        description: "Description for Grinding Media",
+        link: "/solutions/grinding-media",
+      },
+      {
+        name: "Digital Solutions",
+        description: "Description for Digital Solutions",
+        link: "/solutions/digital-solutions",
+      },
+    ],
+  },
+];
+
 const links = [
   {
     label: "Solutions",
-    subItems: [
-      { label: "ME FIT Grinding", path: "/solutions/me-fit-grinding" },
-      { label: "ME FIT Crushing", path: "/solutions/me-fit-crushing" },
-      { label: "Crushing", path: "/solutions/crushing" },
-      { label: "Grinding", path: "/solutions/grinding" },
-      { label: "Grinding Media", path: "/solutions/grinding-media" },
-      { label: "Digital Solutions", path: "/solutions/digital-solutions" },
-    ],
+    subItems: dropdownData,
   },
   { label: "About Us", path: "/about" },
   { label: "Case Studies", path: "/case-study" },
@@ -61,110 +99,27 @@ const Navbar: React.FC = () => {
                     />
                   </button>
                   {activeDropdown === index && (
-                    <div className="absolute top-full left-0 w-screen bg-blue-700 text-white z-50 py-8">
-                      <div className="container mx-auto px-4 md:px-28 grid grid-cols-2 gap-8">
-                        {/* First Column */}
-                        <div className="border-r border-white pr-8">
-                          <div className="space-y-8">
-                            {/* ME FIT Grinding */}
-                            <div>
-                              <h4 className="text-lg font-bold">
-                                ME FIT Grinding
-                              </h4>
-                              <p className="text-sm mt-2">
-                                This is a description for ME FIT Grinding.
-                              </p>
+                    <div className="absolute left-0 top-full bg-blu text-white z-50 p-8 grid grid-cols-2 gap-8 w-[700px] h-auto rounded-b-lg">
+                      {link.subItems.map((section, sectionIndex) => (
+                        <div key={sectionIndex}>
+                          <h4 className="font-bold text-lg mb-4">
+                            {section.title}
+                          </h4>
+                          {section.items.map((item, itemIndex) => (
+                            <div key={itemIndex} className="space-y-2 mb-6">
+                              <h5 className="font-semibold">{item.name}</h5>
+                              <p className="text-sm">{item.description}</p>
                               <Link
-                                to="/solutions/me-fit-grinding"
-                                className="text-orange-400 mt-4 block hover:underline"
-                                onClick={() => setActiveDropdown(null)}
+                                to={item.link}
+                                className="text-orange-500 hover:underline"
+                                onClick={() => setActiveDropdown(null)} // Close dropdown on link click
                               >
                                 Learn More →
                               </Link>
                             </div>
-                            {/* ME FIT Crushing */}
-                            <div>
-                              <h4 className="text-lg font-bold">
-                                ME FIT Crushing
-                              </h4>
-                              <p className="text-sm mt-2">
-                                This is a description for ME FIT Crushing.
-                              </p>
-                              <Link
-                                to="/solutions/me-fit-crushing"
-                                className="text-orange-400 mt-4 block hover:underline"
-                                onClick={() => setActiveDropdown(null)}
-                              >
-                                Learn More →
-                              </Link>
-                            </div>
-                          </div>
+                          ))}
                         </div>
-
-                        {/* Second Column */}
-                        <div className="grid grid-cols-2 gap-8">
-                          {/* Crushing */}
-                          <div>
-                            <h4 className="text-lg font-bold">Crushing</h4>
-                            <p className="text-sm mt-2">
-                              This is a description for Crushing.
-                            </p>
-                            <Link
-                              to="/solutions/crushing"
-                              className="text-orange-400 mt-4 block hover:underline"
-                              onClick={() => setActiveDropdown(null)}
-                            >
-                              Learn More →
-                            </Link>
-                          </div>
-                          {/* Grinding */}
-                          <div>
-                            <h4 className="text-lg font-bold">Grinding</h4>
-                            <p className="text-sm mt-2">
-                              This is a description for Grinding.
-                            </p>
-                            <Link
-                              to="/solutions/grinding"
-                              className="text-orange-400 mt-4 block hover:underline"
-                              onClick={() => setActiveDropdown(null)}
-                            >
-                              Learn More →
-                            </Link>
-                          </div>
-                          {/* Grinding Media */}
-                          <div>
-                            <h4 className="text-lg font-bold">
-                              Grinding Media
-                            </h4>
-                            <p className="text-sm mt-2">
-                              This is a description for Grinding Media.
-                            </p>
-                            <Link
-                              to="/solutions/grinding-media"
-                              className="text-orange-400 mt-4 block hover:underline"
-                              onClick={() => setActiveDropdown(null)}
-                            >
-                              Learn More →
-                            </Link>
-                          </div>
-                          {/* Digital Solutions */}
-                          <div>
-                            <h4 className="text-lg font-bold">
-                              Digital Solutions
-                            </h4>
-                            <p className="text-sm mt-2">
-                              This is a description for Digital Solutions.
-                            </p>
-                            <Link
-                              to="/solutions/digital-solutions"
-                              className="text-orange-400 mt-4 block hover:underline"
-                              onClick={() => setActiveDropdown(null)}
-                            >
-                              Learn More →
-                            </Link>
-                          </div>
-                        </div>
-                      </div>
+                      ))}
                     </div>
                   )}
                 </div>
@@ -231,15 +186,18 @@ const Navbar: React.FC = () => {
                     </button>
                     {activeDropdown === index && (
                       <ul className="mt-2 ml-4 space-y-2">
-                        {link.subItems.map((subItem, subIndex) => (
-                          <li key={subIndex}>
-                            <Link
-                              to={subItem.path}
-                              className="hover:underline"
-                              onClick={() => setIsMenuOpen(false)} // Close mobile menu on link click
-                            >
-                              {subItem.label}
-                            </Link>
+                        {link.subItems.map((section, sectionIndex) => (
+                          <li key={sectionIndex}>
+                            {section.items.map((item, itemIndex) => (
+                              <Link
+                                key={itemIndex}
+                                to={item.link}
+                                className="block hover:underline"
+                                onClick={() => setIsMenuOpen(false)}
+                              >
+                                {item.name}
+                              </Link>
+                            ))}
                           </li>
                         ))}
                       </ul>
