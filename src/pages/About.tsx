@@ -1,5 +1,5 @@
 // About.tsx
-import React from "react";
+import React, { useEffect } from "react";
 import Vision from "../components/Vision";
 import TabbedLayout from "../components/TabbedLayout";
 import News from "../components/News";
@@ -27,6 +27,9 @@ const stats = [
 ];
 
 const About: React.FC = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <section className="pt-12 text-center">
       <p className="max-w-2xl mx-auto mb-24 text-left text-lg text-grey">

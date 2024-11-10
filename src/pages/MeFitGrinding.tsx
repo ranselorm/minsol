@@ -4,6 +4,7 @@ import Hero from "../components/solutions/Hero";
 import Stats from "../components/solutions/Stats";
 import Help from "../components/solutions/Help";
 import Companies from "../components/solutions/Companies";
+import Consultant from "../components/Consultant";
 
 const MeFitGrinding: React.FC = () => {
   return (
@@ -20,6 +21,7 @@ const MeFitGrinding: React.FC = () => {
       <Stats />
       <Help />
       <Companies />
+      <Consultant />
     </>
   );
 };
