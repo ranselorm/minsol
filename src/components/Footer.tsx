@@ -27,13 +27,9 @@ const footerLinks = {
 const Footer: React.FC = () => (
   <footer className="bg-black text-white py-8 px-4 md:px-28">
     <div className="max-w-screen-xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
-      <div>
-        <img
-          src="/path/to/logo.png"
-          alt="ME Elecmetal Logo"
-          className="mb-4 w-32"
-        />
-      </div>
+      <Link to="/" className="text-lg font-bold inline-flex">
+        <img src="/images/logo.svg" className="w-[80%]" />
+      </Link>
 
       <div>
         <h3 className="text-lg font-semibold mb-4">ME Elecmetal</h3>

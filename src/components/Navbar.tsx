@@ -61,9 +61,9 @@ const links = [
 ];
 
 const Navbar: React.FC = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false); // For mobile menu
-  const [isDrawerOpen, setIsDrawerOpen] = useState(false); // For desktop sidebar
-  const [activeDropdown, setActiveDropdown] = useState<number | null>(null); // Tracks which dropdown is active
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState<number | null>(null);
 
   const toggleMenu = () => setIsMenuOpen((prev) => !prev);
   const toggleDrawer = () => setIsDrawerOpen((prev) => !prev);
@@ -71,14 +71,12 @@ const Navbar: React.FC = () => {
     setActiveDropdown(activeDropdown === index ? null : index);
 
   return (
-    <nav className="bg-blue-800 text-white py-4 px-4 md:px-28 relative">
+    <nav className="bg-blu text-white py-4 px-4 md:px-28 relative">
       <div className="flex justify-between items-center">
-        {/* Logo */}
         <Link to="/" className="text-lg font-bold">
-          Logo
+          <img src="/images/logo.svg" className="w-[80%]" />
         </Link>
 
-        {/* Desktop Navigation Links */}
         <div className="hidden md:flex items-center space-x-6">
           {links.map((link, index) => (
             <div key={index} className="relative">
@@ -138,7 +136,7 @@ const Navbar: React.FC = () => {
           onClick={toggleDrawer}
           aria-label="Toggle Side Drawer"
         >
-          <Icon icon="mdi:menu" width="24" />
+          <Icon icon="mdi:menu" width="30" />
         </button>
 
         {/* Mobile Menu Button */}
