@@ -29,26 +29,28 @@ const experiences = [
 
 const Experience: React.FC = () => {
   return (
-    <section className="py-8 px-4 md:px-28 bg-blue-50">
-      <div className="flex justify-between items-center mb-8">
-        <h2 className="section-title">Unlock Insights from Our Experience</h2>
-        <Link
-          to="#"
-          className="text-orange-600 font-semibold inline-flex items-center"
-        >
-          More &rarr;
-        </Link>
-      </div>
-      <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        {experiences.map((experience, index) => (
-          <ExperienceCard
-            key={index}
-            image={experience.image}
-            title={experience.title}
-            linkText={experience.linkText}
-            linkUrl={experience.linkUrl}
-          />
-        ))}
+    <section className="py-8  bg-gray-100">
+      <div className="px-4 md:px-20 container mx-auto">
+        <div className="flex justify-between items-center mb-8">
+          <h2 className="section-title">Unlock Insights from Our Experience</h2>
+          <Link
+            to="#"
+            className="text-orange-600 font-semibold inline-flex items-center"
+          >
+            More &rarr;
+          </Link>
+        </div>
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {experiences.map((experience, index) => (
+            <ExperienceCard
+              key={index}
+              image={experience.image}
+              title={experience.title}
+              linkText={experience.linkText}
+              linkUrl={experience.linkUrl}
+            />
+          ))}
+        </div>
       </div>
     </section>
   );
