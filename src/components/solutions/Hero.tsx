@@ -1,6 +1,5 @@
 // components/Hero.tsx
 import React from "react";
-import { Link } from "react-router-dom";
 import { useModal } from "../../context/ModalContext";
 
 interface HeroProps {
@@ -17,7 +16,6 @@ const Hero: React.FC<HeroProps> = ({
   title,
   subtitle,
   buttonText,
-  buttonLink,
   backgroundImage,
   flexImage,
   imageAlt,

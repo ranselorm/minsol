@@ -17,12 +17,9 @@ import Solutions from "./pages/Solutions";
 import MeFitGrinding from "./pages/MeFitGrinding";
 import Newsroom from "./pages/Newsroom";
 import ContactModal from "./components/ContactModal";
-import { useState } from "react";
 import MeFitCrushing from "./pages/MeFitCrushing";
 
 function App() {
-  const [showModal, setShowModal] = useState(false);
-
   return (
     <>
       <Routes>
