@@ -1,114 +1,103 @@
 import React, { useEffect } from "react";
+import { useModal } from "../context/ModalContext";
 
 interface InputFieldProps {
-  id: string;
   label: string;
+  placeholder: string;
   type?: string;
-  required?: boolean;
-  rows?: number; // Optional for textarea
-  isTextarea?: boolean; // Flag to differentiate between input and textarea
-}
-
-interface InputFieldProps {
-  id: string;
-  label: string;
-  type?: string;
-  required?: boolean;
-  rows?: number; // Optional for textarea
-  isTextarea?: boolean; // Flag to differentiate between input and textarea
+  isTextArea?: boolean;
+  rows?: number;
 }
 
 const InputField: React.FC<InputFieldProps> = ({
-  id,
   label,
+  placeholder,
   type = "text",
-  required = false,
+  isTextArea = false,
   rows,
-  isTextarea = false,
 }) => {
   return (
-    <div className={isTextarea ? "col-span-full" : "col-span-2 md:col-span-1"}>
-      <label htmlFor={id} className="block text-sm font-bold text-blu mb-1">
-        {label} {required && "*"}
-      </label>
-      {isTextarea ? (
+    <div className="mb-4">
+      <label className="block font-semibold mb-1">{label}</label>
+      {isTextArea ? (
         <textarea
-          id={id}
-          name={id}
-          rows={rows || 4}
-          className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-blu"
-          required={required}
+          className="w-full border border-gray-300 rounded-md px-3 py-2"
+          rows={rows}
+          placeholder={placeholder}
         ></textarea>
       ) : (
         <input
           type={type}
-          id={id}
-          name={id}
-          className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-blu"
-          required={required}
+          className="w-full border border-gray-300 rounded-md px-3 py-2"
+          placeholder={placeholder}
         />
       )}
     </div>
   );
 };
 
-interface ContactModalProps {
-  onClose: () => void;
-}
+const ContactModal: React.FC = () => {
+  const { isModalOpen, closeModal } = useModal();
 
-const ContactModal: React.FC<ContactModalProps> = ({ onClose }) => {
   useEffect(() => {
-    document.body.style.overflow = "hidden";
+    if (isModalOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
     return () => {
       document.body.style.overflow = "auto";
     };
-  }, []);
+  }, [isModalOpen]);
+
+  if (!isModalOpen) return null;
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50"
-      onClick={onClose}
+      className="fixed inset-0 z-50 bg-black bg-opacity-50 flex justify-center items-center"
+      onClick={closeModal}
     >
       <div
-        className="bg-white w-[90%] max-w-2xl rounded-lg shadow-lg overflow-hidden"
+        className="bg-white w-[90%] md:w-[50%] p-6 rounded-lg relative"
         onClick={(e) => e.stopPropagation()}
       >
-        <div className="p-6">
-          <h2 className="text-2xl font-bold text-blue-800 mb-4">Contact us</h2>
-          <p className="text-gray-600 mb-6">
-            Keep up to date with the latest news from ME Elecmetal.
-          </p>
-          <form>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <InputField id="name" label="Name" required />
-              <InputField id="surname" label="Surname" required />
-              <InputField id="email" label="Email" type="email" required />
-              <InputField id="subject" label="Subject" required />
-              <InputField
-                id="message"
-                label="Message"
-                isTextarea
-                rows={5}
-                required
-              />
-            </div>
-            <div className="flex justify-end mt-6">
-              <button
-                type="button"
-                className="text-orange-600 font-bold px-4 py-2 rounded-md mr-4"
-                onClick={onClose}
-              >
-                Cancel
-              </button>
-              <button
-                type="submit"
-                className="bg-orange-600 hover:bg-orange-700 text-white font-bold px-4 py-2 rounded-md"
-              >
-                Send →
-              </button>
-            </div>
-          </form>
-        </div>
+        <h2 className="text-xl font-bold mb-4">Contact Us</h2>
+        <p className="mb-4">
+          Keep up to date with the latest news from ME Elecmetal.
+        </p>
+        <form>
+          <div className="grid grid-cols-2 gap-4">
+            <InputField label="Name *" placeholder="Enter your name" />
+            <InputField label="Surname *" placeholder="Enter your surname" />
+            <InputField
+              label="Email *"
+              placeholder="Enter your email"
+              type="email"
+            />
+            <InputField label="Subject *" placeholder="Enter the subject" />
+          </div>
+          <InputField
+            label="Message *"
+            placeholder="Enter your message"
+            isTextArea
+            rows={4}
+          />
+          <div className="flex justify-end space-x-4 mt-4">
+            <button
+              type="button"
+              className="bg-gray-300 px-4 py-2 rounded-md"
+              onClick={closeModal}
+            >
+              Cancel
+            </button>
+            <button
+              type="submit"
+              className="bg-orange-600 text-white px-4 py-2 rounded-md"
+            >
+              Send →
+            </button>
+          </div>
+        </form>
       </div>
     </div>
   );

@@ -15,14 +15,21 @@ import CorporateAffairs from "./pages/CorporateAffairs";
 import InvestorContact from "./pages/InvestorsContact";
 import Solutions from "./pages/Solutions";
 import MeFitGrinding from "./pages/MeFitGrinding";
+import Newsroom from "./pages/Newsroom";
+import ContactModal from "./components/ContactModal";
+import { useState } from "react";
+import MeFitCrushing from "./pages/MeFitCrushing";
 
 function App() {
+  const [showModal, setShowModal] = useState(false);
+
   return (
     <>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="solutions" element={<Solutions />}>
           <Route path="me-fit-grinding" element={<MeFitGrinding />} />
+          <Route path="me-fit-crushing" element={<MeFitCrushing />} />
         </Route>
         <Route path="about" element={<AboutLayout />}>
           <Route path="/about" element={<About />} />
@@ -41,8 +48,10 @@ function App() {
         </Route>
 
         <Route path="/contact" element={<Contact />} />
+        <Route path="/newsroom" element={<Newsroom />} />
         {/* <Route path="*" element={<NotFound />} /> */}
       </Routes>
+      <ContactModal />
     </>
   );
 }

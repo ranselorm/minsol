@@ -4,17 +4,19 @@ import React from "react";
 const Vision: React.FC = () => {
   return (
     <section className="flex flex-col md:flex-row justify-between items-stretch py-10 w-full">
-      <div className="flex-1 bg-white w-full flex flex-col">
-        <div className="px-4 md:px-28 py-8">
-          <h3 className="text-2xl mb-4 text-left">Vision</h3>
-          <p className="text-left text-grey font-medium text-base">
-            ME Elecmetal will be a globally competitive supplier recognized for
-            excellence and leadership in the sustainable delivery of integral
-            solutions that add value to mining processes and other target
-            markets.
-          </p>
+      <div className="flex-1 bg-white w-full ">
+        <div className="flex flex-col container mx-auto">
+          <div className="px-4 md:px-20 py-8">
+            <h3 className="text-2xl mb-4 text-left">Vision</h3>
+            <p className="text-left text-grey font-medium text-base">
+              ME Elecmetal will be a globally competitive supplier recognized
+              for excellence and leadership in the sustainable delivery of
+              integral solutions that add value to mining processes and other
+              target markets.
+            </p>
+          </div>
         </div>
-        <div className="px-4 md:px-28 py-8">
+        <div className="px-4 md:px-20 py-8">
           <h3 className="text-2xl mb-4 text-left">Mission</h3>
           <p className="text-left text-grey font-medium text-base">
             To satisfy the needs and exceed the expectations of its customers,

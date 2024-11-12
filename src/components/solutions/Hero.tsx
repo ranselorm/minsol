@@ -1,6 +1,7 @@
 // components/Hero.tsx
 import React from "react";
 import { Link } from "react-router-dom";
+import { useModal } from "../../context/ModalContext";
 
 interface HeroProps {
   title: string;
@@ -21,6 +22,7 @@ const Hero: React.FC<HeroProps> = ({
   flexImage,
   imageAlt,
 }) => {
+  const { openModal } = useModal();
   return (
     <section
       className="relative bg-cover bg-center h-[400px] md:h-[400px] flex items-center text-white"
@@ -35,12 +37,12 @@ const Hero: React.FC<HeroProps> = ({
         <div className="md:w-1/2 text-center md:text-left">
           <h1 className="text-3xl md:text-5xl font-bold mb-4">{title}</h1>
           <p className="text-lg md:text-xl mb-6">{subtitle}</p>
-          <Link
-            to={buttonLink}
+          <button
             className="bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3 px-6 rounded-md transition"
+            onClick={() => openModal()}
           >
             {buttonText}
-          </Link>
+          </button>
         </div>
 
         {/* Flex Image */}

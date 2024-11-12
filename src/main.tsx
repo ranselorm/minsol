@@ -5,13 +5,16 @@ import App from "./App.tsx";
 import { BrowserRouter } from "react-router-dom";
 import Navbar from "./components/Navbar.tsx";
 import Footer from "./components/Footer.tsx";
+import { ModalProvider } from "./context/ModalContext.tsx";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <BrowserRouter>
-      <Navbar />
-      <App />
-      <Footer />
-    </BrowserRouter>
+    <ModalProvider>
+      <BrowserRouter>
+        <Navbar />
+        <App />
+        <Footer />
+      </BrowserRouter>
+    </ModalProvider>
   </StrictMode>
 );
