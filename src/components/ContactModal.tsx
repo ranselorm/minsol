@@ -1,11 +1,62 @@
 import React, { useEffect } from "react";
 
+interface InputFieldProps {
+  id: string;
+  label: string;
+  type?: string;
+  required?: boolean;
+  rows?: number; // Optional for textarea
+  isTextarea?: boolean; // Flag to differentiate between input and textarea
+}
+
+interface InputFieldProps {
+  id: string;
+  label: string;
+  type?: string;
+  required?: boolean;
+  rows?: number; // Optional for textarea
+  isTextarea?: boolean; // Flag to differentiate between input and textarea
+}
+
+const InputField: React.FC<InputFieldProps> = ({
+  id,
+  label,
+  type = "text",
+  required = false,
+  rows,
+  isTextarea = false,
+}) => {
+  return (
+    <div className={isTextarea ? "col-span-full" : "col-span-2 md:col-span-1"}>
+      <label htmlFor={id} className="block text-sm font-bold text-blu mb-1">
+        {label} {required && "*"}
+      </label>
+      {isTextarea ? (
+        <textarea
+          id={id}
+          name={id}
+          rows={rows || 4}
+          className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-blu"
+          required={required}
+        ></textarea>
+      ) : (
+        <input
+          type={type}
+          id={id}
+          name={id}
+          className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-blu"
+          required={required}
+        />
+      )}
+    </div>
+  );
+};
+
 interface ContactModalProps {
   onClose: () => void;
 }
 
 const ContactModal: React.FC<ContactModalProps> = ({ onClose }) => {
-  // Prevent scrolling on the main page when the modal is open
   useEffect(() => {
     document.body.style.overflow = "hidden";
     return () => {
@@ -16,11 +67,11 @@ const ContactModal: React.FC<ContactModalProps> = ({ onClose }) => {
   return (
     <div
       className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50"
-      onClick={onClose} // Dismiss modal when clicking on overlay
+      onClick={onClose}
     >
       <div
         className="bg-white w-[90%] max-w-2xl rounded-lg shadow-lg overflow-hidden"
-        onClick={(e) => e.stopPropagation()} // Prevent click inside modal from closing it
+        onClick={(e) => e.stopPropagation()}
       >
         <div className="p-6">
           <h2 className="text-2xl font-bold text-blue-800 mb-4">Contact us</h2>
@@ -29,81 +80,17 @@ const ContactModal: React.FC<ContactModalProps> = ({ onClose }) => {
           </p>
           <form>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div>
-                <label
-                  htmlFor="name"
-                  className="block text-sm font-bold text-blue-800 mb-1"
-                >
-                  Name *
-                </label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  className="w-full border border-gray-300 rounded-md px-3 py-2"
-                  required
-                />
-              </div>
-              <div>
-                <label
-                  htmlFor="surname"
-                  className="block text-sm font-bold text-blue-800 mb-1"
-                >
-                  Surname *
-                </label>
-                <input
-                  type="text"
-                  id="surname"
-                  name="surname"
-                  className="w-full border border-gray-300 rounded-md px-3 py-2"
-                  required
-                />
-              </div>
-              <div className="col-span-2">
-                <label
-                  htmlFor="email"
-                  className="block text-sm font-bold text-blue-800 mb-1"
-                >
-                  Email *
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  className="w-full border border-gray-300 rounded-md px-3 py-2"
-                  required
-                />
-              </div>
-              <div className="col-span-2">
-                <label
-                  htmlFor="subject"
-                  className="block text-sm font-bold text-blue-800 mb-1"
-                >
-                  Subject *
-                </label>
-                <input
-                  type="text"
-                  id="subject"
-                  name="subject"
-                  className="w-full border border-gray-300 rounded-md px-3 py-2"
-                  required
-                />
-              </div>
-              <div className="col-span-2">
-                <label
-                  htmlFor="message"
-                  className="block text-sm font-bold text-blue-800 mb-1"
-                >
-                  Message *
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  rows={4}
-                  className="w-full border border-gray-300 rounded-md px-3 py-2"
-                  required
-                ></textarea>
-              </div>
+              <InputField id="name" label="Name" required />
+              <InputField id="surname" label="Surname" required />
+              <InputField id="email" label="Email" type="email" required />
+              <InputField id="subject" label="Subject" required />
+              <InputField
+                id="message"
+                label="Message"
+                isTextarea
+                rows={5}
+                required
+              />
             </div>
             <div className="flex justify-end mt-6">
               <button
