@@ -59,7 +59,7 @@ const CaseStudy: React.FC = () => {
     <section className="bg-gray-100">
       <div className="container mx-auto">
         {/* Title Section */}
-        <div className="px-4 md:px-28 py-8">
+        <div className="px-4 md:px-20 py-8">
           <header className="text-center mb-12">
             <h1 className="text-3xl font-bold text-blue-800">Case studies</h1>
           </header>

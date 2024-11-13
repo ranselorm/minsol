@@ -33,7 +33,7 @@ const About: React.FC = () => {
 
   return (
     <section className="pt-12 text-center">
-      <div className="container mx-auto">
+      <div className="container mx-auto px-4 md:px-20">
         <p className="max-w-2xl mx-auto mb-24 text-left text-lg text-grey">
           We are a global company with more than 100 years of experience as a
           supplier and strategic partner in the mining industry. We are known

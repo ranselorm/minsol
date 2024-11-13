@@ -33,7 +33,7 @@ const SustainabilityCard: React.FC<SustainabilityCardProps> = ({
         />
       </div>
       <div className="flex-1 flex flex-col justify-center md:pl-12">
-        <h2 className="text-4 capitalizexl font-bold mb-4 text-blu uppercase">
+        <h2 className="text-4 capitalizexl font-bold mb-4 text-blu uppercase mt-6 md:mt-0">
           {title}
         </h2>
         <p className="text-grey mb-6 leading-normal">{description}</p>
