@@ -41,30 +41,32 @@ const TabbedLayout: React.FC = () => {
   const [selectedTab, setSelectedTab] = useState<string>("Board of Directors");
 
   return (
-    <div className="px-4 py-8 md:px-28 h-[100vh]">
-      {/* Tabs */}
-      <div className="flex space-x-4 mb-6 border-b border-gray-300 pb-2">
-        {Object.keys(committees).map((tab) => (
-          <button
-            key={tab}
-            className={`text-lg font-medium ${
-              selectedTab === tab
-                ? "text-blue-800 border-b-2 border-blue-800"
-                : "text-gray-600"
-            }`}
-            onClick={() => setSelectedTab(tab)}
-          >
-            {tab}
-          </button>
-        ))}
-      </div>
+    <section className="px-4 py-8 md:px-20 h-[100vh]">
+      <div className="container mx-auto">
+        {/* Tabs */}
+        <div className="flex space-x-4 mb-6 border-b border-gray-300 pb-2">
+          {Object.keys(committees).map((tab) => (
+            <button
+              key={tab}
+              className={`text-lg font-medium ${
+                selectedTab === tab
+                  ? "text-blue-800 border-b-2 border-blue-800"
+                  : "text-gray-600"
+              }`}
+              onClick={() => setSelectedTab(tab)}
+            >
+              {tab}
+            </button>
+          ))}
+        </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-        {committees[selectedTab]?.map((member) => (
-          <Card key={member.name} member={member} />
-        ))}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {committees[selectedTab]?.map((member) => (
+            <Card key={member.name} member={member} />
+          ))}
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 
