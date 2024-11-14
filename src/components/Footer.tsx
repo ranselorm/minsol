@@ -28,7 +28,7 @@ const Footer: React.FC = () => (
   <footer className="bg-black text-white py-8 px-4 md:px-28">
     <div className="max-w-screen-xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
       <Link to="/" className="text-lg font-bold inline-flex">
-        <img src="/images/logo.svg" className="w-[80%]" />
+        <img src="/images/logo.svg" className="w-[40%] md:w-[80%]" />
       </Link>
 
       <div>

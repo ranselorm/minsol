@@ -81,7 +81,7 @@ const Stats: React.FC = () => {
           As part of our extensive customer experience, we have completed large
           projects focused on the following five key areas:
         </p>
-        <div className="flex justify-center mt-4 space-x-4">
+        <div className="flex  flex-wrap justify-center mt-4 space-x-4">
           {[
             "Reliability",
             "Availability",

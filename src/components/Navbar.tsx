@@ -73,13 +73,22 @@ const Navbar: React.FC = () => {
   const toggleDropdown = (index: number) =>
     setActiveDropdown(activeDropdown === index ? null : index);
 
+  const handleButtonClick = () => {
+    openModal();
+    setIsMenuOpen(false);
+  };
+
   return (
     <>
       <nav className="bg-blu text-white py-4 relative">
         <div className="px-4 md:px-20 container mx-auto">
           <div className="flex justify-between items-center">
-            <Link to="/" className="text-lg font-bold">
-              <img src="/images/logo.svg" className="w-[80%]" alt="Logo" />
+            <Link to="/">
+              <img
+                src="/images/logo.svg"
+                className=" w-[60%] md:w-[80%]"
+                alt="Logo"
+              />
             </Link>
 
             <div className="hidden md:flex items-center space-x-6">
@@ -151,7 +160,7 @@ const Navbar: React.FC = () => {
             </button>
 
             {/* Mobile Menu Button */}
-            <button className="block md:hidden text-2xl" onClick={toggleMenu}>
+            <button className="block md:hidden text-3xl" onClick={toggleMenu}>
               <Icon icon={isMenuOpen ? "mdi:close" : "mdi:menu"} width="24" />
             </button>
           </div>
@@ -166,9 +175,9 @@ const Navbar: React.FC = () => {
 
           {/* Mobile Navigation Menu */}
           {isMenuOpen && (
-            <div className="fixed top-0 left-0 w-[75%] h-full bg-blue-700 text-white z-50 p-6">
+            <div className="fixed top-0 right-0 w-[80%] h-full bg-blue-700 text-white z-50 p-6">
               <button
-                className="text-2xl mb-6"
+                className="text-3xl mb-6"
                 onClick={() => setIsMenuOpen(false)}
                 aria-label="Close Menu"
               >
@@ -178,7 +187,7 @@ const Navbar: React.FC = () => {
                 {links.map((link, index) => (
                   <li key={index}>
                     {link.subItems ? (
-                      <div>
+                      <div className="hidden">
                         <button
                           className="w-full flex justify-between items-center"
                           onClick={() => toggleDropdown(index)}
@@ -215,7 +224,7 @@ const Navbar: React.FC = () => {
                     ) : (
                       <Link
                         to={link.path}
-                        className="block hover:underline"
+                        className="block hover:underline text-lg mb-6"
                         onClick={() => setIsMenuOpen(false)}
                       >
                         {link.label}
@@ -225,8 +234,8 @@ const Navbar: React.FC = () => {
                 ))}
                 <li>
                   <button
-                    onClick={openModal}
-                    className="bg-orange-600 px-4 py-2 rounded-lg hover:bg-orange-700 w-full text-left"
+                    onClick={handleButtonClick}
+                    className="bg-orange-600 px-8 py-2 rounded-lg hover:bg-orange-700 w-max text-left"
                   >
                     Contact Us
                   </button>
