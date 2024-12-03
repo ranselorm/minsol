@@ -56,9 +56,10 @@ const links = [
     subItems: dropdownData,
   },
   { label: "About Us", path: "/about" },
-  { label: "Case Studies", path: "/case-study" },
-  { label: "Sustainability", path: "/sustainability" },
-  { label: "Investors", path: "/investors" },
+  { label: "Services", path: "/services" },
+  // { label: "Case Studies", path: "/case-study" },
+  // { label: "Sustainability", path: "/sustainability" },
+  // { label: "Investors", path: "/investors" },
 ];
 
 const Navbar: React.FC = () => {
@@ -80,13 +81,13 @@ const Navbar: React.FC = () => {
 
   return (
     <>
-      <nav className="bg-blu text-white py-4 relative">
+      <nav className="bg-gray-100 text-black py-4 relative">
         <div className="px-4 md:px-20 container mx-auto">
           <div className="flex justify-between items-center">
-            <Link to="/">
+            <Link to="/" className="md:w-40 h-12">
               <img
-                src="/images/logo.svg"
-                className=" w-[60%] md:w-[80%]"
+                src="/images/sol.png"
+                className="w-full h-full object-cover"
                 alt="Logo"
               />
             </Link>
@@ -144,7 +145,7 @@ const Navbar: React.FC = () => {
               ))}
               <button
                 onClick={openModal} //desktop
-                className="bg-orange-600 px-4 py-2 rounded-lg hover:bg-orange-700"
+                className="bg-main px-4 py-2 rounded-lg text-white hover:bg-orange-700"
               >
                 Contact Us
               </button>
@@ -235,7 +236,7 @@ const Navbar: React.FC = () => {
                 <li>
                   <button
                     onClick={handleButtonClick}
-                    className="bg-orange-600 px-8 py-2 rounded-lg hover:bg-orange-700 w-max text-left"
+                    className="bg-main px-8 py-2 rounded-lg hover:bg-orange-700 w-max text-left"
                   >
                     Contact Us
                   </button>

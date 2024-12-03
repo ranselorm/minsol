@@ -4,28 +4,30 @@ import { Link } from "react-router-dom";
 
 const solutions = [
   {
-    title: "ME FIT Programs",
-    description: "Learn more about our ME FIT integrated solutions programs.",
+    title: "Technical and Engineering",
+    description:
+      "We specialize in delivering end-to-end technical and engineering services for mineral processing, including feasibility studies, process design, and optimization. ",
     buttonText: "More Information",
     image: "/images/s1.png",
   },
   {
-    title: "Products and Services",
-    description: "Explore Our Range of Products and Services",
+    title: "Training for Mining Operational Personnel",
+    description:
+      "We offer specialized training for mining operational personnel, including hands-on instruction in equipment operation.",
     buttonText: "More Information",
     image: "/images/s2.jpg",
   },
   {
-    title: "ME Digital Lab",
+    title: "Logistics and Transportation",
     description:
-      "Discover Mining 4.0 and Our ME Digital Lab Approach to Technology",
+      "We offer comprehensive logistics and transportation services for the mineral processing industry, including supply chain",
     buttonText: "ME Digital Lab",
     image: "/images/s3.png",
   },
   {
-    title: "Digital solutions",
+    title: "Tenement Administration",
     description:
-      "Learn more about Digital solutions services for mining industry",
+      "Our expert tenement administration services ensure efficient and legally compliant management of mineral exploration",
     buttonText: "More Information",
     image: "/images/s4.jpg",
   },
@@ -51,8 +53,10 @@ const Solutions: React.FC = () => {
               </div>
               <div className="flex flex-col justify-between p-4 text-white h-full">
                 <div>
-                  <h3 className="text-lg font-bold mb-2">{solution.title}</h3>
-                  <p className="mb-4">{solution.description}</p>
+                  <h3 className="text-base font-bold mb-2">{solution.title}</h3>
+                  <p className="mb-4 text-sm text-gray-300">
+                    {solution.description}
+                  </p>
                 </div>
                 <Link
                   to="#"

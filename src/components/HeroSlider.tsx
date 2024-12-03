@@ -6,22 +6,25 @@ import { Link } from "react-router-dom";
 const slides = [
   {
     image: "/images/banner1.jpg",
-    title: "More than a Century of Experience Paving the Path to the Future",
-    description: "Aggregates Academy & Expo",
+    title: "Welcome to Minsol Limited",
+    description:
+      "your premier partner in consultancy and logistics for the mineral resources industry. We specialize in providing innovative solutions across a broad spectrum of services",
     buttonText: "Learn More",
     link: "#",
   },
   {
     image: "/images/banner2.png",
-    title: "ME Digital – Our Technology Division",
-    description: "Explore the latest in digital technology",
+    title: "Manufacturing and Distribution",
+    description:
+      "A wide range of high-quality products, from ground support systems and mill liners to grinding media and steel products. Tailored design, fabrication, casting, and machining solutions for custom foundry needs.",
     buttonText: "ME Digital Lab",
     link: "#",
   },
   {
     image: "/images/banner3.jpg",
-    title: "Integral solutions for the milling process",
-    description: "Discover our solutions for milling",
+    title: "Training for Mining/Processing Personnel",
+    description:
+      "Specialized programs to enhance the skills and safety of operational teams",
     buttonText: "ME FIT Grinding",
     link: "#",
   },
@@ -63,14 +66,14 @@ const HeroSlider: React.FC = () => {
             backgroundPosition: "center",
           }}
         >
-          <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center text-center text-white p-6">
-            <h2 className="text-4xl font-bold mb-2 md:w-[600px] capitalize">
+          <div className="absolute inset-0 bg-black bg-opacity-75 flex flex-col justify-center items-center text-center text-white p-6">
+            <h2 className=" text-2xl md:text-5xl font-bold md:max-w-3xl capitalize">
               {slide.title}
             </h2>
-            {/* <p className="mb-4">{slide.description}</p> */}
+            <p className="my-6 max-w-2xl text-lg">{slide.description}</p>
             <Link
               to={slide.link}
-              className="bg-transparent border-2 border-white px-4 py-2 rounded-md text-sm mt-8 flex items-center gap-x-1 font-bold"
+              className="bg-transparent border-2 border-white px-4 py-2 rounded-md text-sm mt-8 items-center gap-x-1 font-bold hidden"
             >
               {slide.buttonText}
               <Icon icon="ep:right" className="text-white" />
@@ -87,8 +90,8 @@ const HeroSlider: React.FC = () => {
             onClick={() => handleIndicatorClick(index)}
             className={` ${
               index === currentSlide
-                ? "bg-white w-12 h-1 rounded"
-                : "bg-gray-200 w-4 h-1 rounded"
+                ? "bg-main w-12 h-1 rounded"
+                : "bg-gray-400 w-4 h-1 rounded"
             }`}
           ></button>
         ))}
