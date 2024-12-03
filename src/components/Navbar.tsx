@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { Icon } from "@iconify/react";
 import SideDrawer from "./SideDrawer";
 import { Link } from "react-router-dom";
-import { useModal } from "../context/ModalContext";
+import { useModal } from "@/context/ModalContext";
 
 const dropdownData = [
   {
