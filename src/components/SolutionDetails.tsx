@@ -1,15 +1,10 @@
 import { useModal } from "@/context/ModalContext";
 import {
   Dialog,
-  DialogClose,
   DialogContent,
-  DialogDescription,
-  DialogFooter,
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog";
-import { Button } from "@/components/ui/button";
-import { title } from "process";
 
 interface Props {
   selectedItem: any;

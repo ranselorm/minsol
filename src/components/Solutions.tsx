@@ -27,7 +27,7 @@ const solutions = [
       "We offer comprehensive logistics and transportation services for the mineral processing industry, including supply chain",
     details:
       "We offer comprehensive logistics and transportation services for the mineral processing industry, including supply chain management, freight and shipping, transport planning, and fleet management. Our services also encompass the sourcing and delivery of mining and processing consumables, ensuring timely and cost-effective provision of essential materials and equipment while maintaining regulatory compliance and optimizing overall supply chain efficiency.",
-    buttonText: "ME Digital Lab",
+    buttonText: "More Information",
     image: "/images/s3.png",
   },
   {
