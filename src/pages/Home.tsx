@@ -20,10 +20,7 @@ const Home = () => {
     <div>
       <HeroSlider />
       <Solutions onSolutionClick={handleDialogOpen} />
-      <SolutionDetails
-        selectedItem={selectedItem}
-        // onClose={handleDialogClose}
-      />
+      <SolutionDetails selectedItem={selectedItem} />
       <News />
       <Pillars />
       <Experience />
