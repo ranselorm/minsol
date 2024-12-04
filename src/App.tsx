@@ -22,6 +22,7 @@ import MeFitCrushing from "./pages/MeFitCrushing";
 function App() {
   return (
     <>
+      {/* <LanguageSwitcher /> */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="solutions" element={<Solutions />}>

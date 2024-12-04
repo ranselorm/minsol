@@ -28,7 +28,7 @@ const Vision: React.FC = () => {
       </div>
 
       {/* Values Column */}
-      <div className="flex-1 bg-blue-800 text-white w-full flex flex-col px-4 md:px-8 py-8 font-semibold">
+      <div className="flex-1 bg-blu text-white w-full flex flex-col px-4 md:px-8 py-8 font-semibold">
         <h3 className="text-2xl font-bold mb-6 text-left pl-4 md:pl-24">
           Values
         </h3>

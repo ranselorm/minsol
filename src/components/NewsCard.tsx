@@ -32,7 +32,7 @@ const NewsCard: React.FC<NewsCardProps> = ({
         </div>
         <Link
           to={link}
-          className="text-orange-600 font-semibold mt-4 self-start"
+          className="text-secondary font-semibold mt-4 self-start"
         >
           More &rarr;
         </Link>
