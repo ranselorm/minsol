@@ -1,4 +1,5 @@
 // components/Vision.tsx
+import { Icon } from "@iconify/react";
 import React from "react";
 
 const Vision: React.FC = () => {
@@ -28,17 +29,51 @@ const Vision: React.FC = () => {
       </div>
 
       {/* Values Column */}
-      <div className="flex-1 bg-blu text-white w-full flex flex-col px-4 md:px-8 py-8 font-semibold">
-        <h3 className="text-2xl font-bold mb-6 text-left pl-4 md:pl-24">
-          Values
-        </h3>
-        <ul className="list-decimal space-y-2 text-left pl-4 md:pl-28 px-28 text-base">
-          <li>Respect for the dignity of others</li>
-          <li>Integral human development</li>
-          <li>Focus on internal and external customers</li>
-          <li>Responsibility and integrity</li>
-          <li>Commitment with sustainability</li>
-        </ul>
+      <div className="flex-1 bg-blu text-white w-full px-4 md:px-8 py-8">
+        <h3 className="text-2xl mb-5 font-bold">Our Values</h3>
+        <div className="flex flex-col gap-y-5 text-[15px]">
+          <div className="flex items-start gap-x-1">
+            <Icon icon="carbon:checkmark-filled" className="w-10 mt-1" />
+            <p className="text-left">
+              <span className="mr-1">Excellence:</span> We are committed to
+              delivering the highest quality services and solutions, setting
+              benchmarks for performance and reliability in the mining sector
+            </p>
+          </div>
+          <div className="flex items-start gap-x-1">
+            <Icon icon="carbon:checkmark-filled" className="w-10 mt-1" />
+            <p className="text-left">
+              <span className="mr-1">Integrity:</span> We conduct our business
+              with transparency, honesty, and accountability, fostering trust
+              and long-term relationships with our stakeholders
+            </p>
+          </div>
+          <div className="flex items-start gap-x-1">
+            <Icon icon="carbon:checkmark-filled" className="w-10 mt-1" />
+            <p className="text-left">
+              <span className="mr-1">Adaptability:</span> We respond dynamically
+              to the evolving needs of the mining industry, ensuring that our
+              services remain relevant and effective in a changing environment
+            </p>
+          </div>
+          <div className="flex items-start gap-x-1">
+            <Icon icon="carbon:checkmark-filled" className="w-10 mt-1" />
+            <p className="text-left">
+              <span className="mr-1">Collaboration:</span> We believe in working
+              closely with our clients and partners to achieve mutual success
+              and drive positive outcomes in every project we undertake
+            </p>
+          </div>
+          <div className="flex items-start gap-x-1">
+            <Icon icon="carbon:checkmark-filled" className="w-10 mt-1" />
+            <p className="text-left">
+              <span className="mr-1">Collaboration:</span> We are dedicated to
+              promoting sustainable practices in all aspects of our operations.
+              We aim to contribute to the long-term health of the mining
+              industry and the communities we serve
+            </p>
+          </div>
+        </div>
       </div>
     </section>
   );

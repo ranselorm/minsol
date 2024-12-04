@@ -25,7 +25,7 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({
         <h3 className="text-lg font-semibold text-blue-800 mb-2">{title}</h3>
         <Link
           to={linkUrl}
-          className="text-orange-600 font-semibold inline-flex items-center"
+          className="text-secondary font-semibold inline-flex items-center"
         >
           {linkText} &rarr;
         </Link>

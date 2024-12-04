@@ -29,13 +29,13 @@ const experiences = [
 
 const Experience: React.FC = () => {
   return (
-    <section className="py-8  bg-gray-100">
+    <section className="py-8 bg-gray-100">
       <div className="px-4 md:px-20 container mx-auto">
         <div className="flex justify-between items-center mb-8">
           <h2 className="section-title">Unlock Insights from Our Experience</h2>
           <Link
             to="#"
-            className="text-orange-600 font-semibold inline-flex items-center"
+            className="text-secondary font-semibold inline-flex items-center"
           >
             More &rarr;
           </Link>

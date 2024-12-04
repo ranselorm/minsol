@@ -6,16 +6,18 @@ const Consultant: React.FC = () => {
   const { openModal } = useModal();
 
   return (
-    <section className="bg-blue-800 text-white py-8 px-4 flex items-center gap-x-8 justify-center">
-      <h2 className="text-lg md:text-2xl font-semibold">
-        Let a consultant answer your questions
-      </h2>
-      <button
-        onClick={openModal}
-        className="bg-orange-600 hover:bg-orange-700 text-white font-semibold py-2 px-8 rounded-md transition-colors duration-300"
-      >
-        Contact
-      </button>
+    <section className="bg-main py-10">
+      <div className="text-white flex items-center gap-x-8 justify-between container mx-auto px-4 md:px-20">
+        <h2 className="text-lg md:text-2xl font-semibold">
+          Let a consultant answer your questions
+        </h2>
+        <button
+          onClick={openModal}
+          className="bg-blu hover:bg-orange-700 text-white font-semibold py-2 px-8 rounded-md transition-colors duration-300"
+        >
+          Contact
+        </button>
+      </div>
     </section>
   );
 };

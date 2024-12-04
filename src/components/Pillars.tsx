@@ -30,7 +30,7 @@ import React from "react";
 
 const Pillars: React.FC = () => {
   return (
-    <section className="bg-main text-white py-12 px-4 md:px-28">
+    <section className="bg-blu text-white py-12 px-4 md:px-28">
       <header className="text-center mb-12">
         <h2 className="text-3xl md:text-4xl font-bold">Sustainability</h2>
       </header>

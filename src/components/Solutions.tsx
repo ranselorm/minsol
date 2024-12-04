@@ -54,7 +54,7 @@ const Solutions: React.FC<SolutionsProps> = ({ onSolutionClick }) => {
           {solutions.map((solution, index) => (
             <div
               key={index}
-              className="bg-[#2c517c] rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 flex flex-col h-[350px]"
+              className="bg-blu rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 flex flex-col h-[350px]"
             >
               <div className="h-[60%] w-full overflow-hidden">
                 <img
