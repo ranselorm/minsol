@@ -7,6 +7,7 @@ import Pillars from "../components/Pillars";
 import Solutions from "../components/Solutions";
 import { useState } from "react";
 import { useModal } from "@/context/ModalContext";
+import Clients from "@/components/Clients";
 // import NewsFeed from "@/components/NewsFeed";
 
 const Home = () => {
@@ -25,6 +26,7 @@ const Home = () => {
       <News />
       <Pillars />
       <Experience />
+      <Clients />
       <Consultant />
       {/* <NewsFeed /> */}
     </div>
