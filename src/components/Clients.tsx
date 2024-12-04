@@ -80,7 +80,7 @@ const Clients = () => {
       <section className="bg-white py-12">
         <div className="container mx-auto px-4 md:px-20">
           <h3 className="section-title text-center">Our Clients</h3>
-          <div className="grid grid-cols-6 w-full items-center justify-center gap-x-6 mt-16">
+          <div className="grid grid-cols-4 md:grid-cols-6 w-full items-center justify-center gap-x-6 mt-16">
             {clients.map((client, index) => (
               <div className="text-center" key={index}>
                 <Tooltip>

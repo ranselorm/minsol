@@ -18,6 +18,7 @@ import MeFitGrinding from "./pages/MeFitGrinding";
 import Newsroom from "./pages/Newsroom";
 import ContactModal from "./components/ContactModal";
 import MeFitCrushing from "./pages/MeFitCrushing";
+import Services from "./pages/Services";
 
 function App() {
   return (
@@ -39,12 +40,13 @@ function App() {
 
         <Route path="case-study" element={<CaseStudy />} />
         <Route path="sustainability" element={<Sustainability />} />
-        <Route path="investors" element={<Investors />}>
+        {/* <Route path="investors" element={<Investors />}>
           <Route path="annual-reports" element={<AnnualReports />} />
           <Route path="corporate-affairs" element={<CorporateAffairs />} />
           <Route path="investors-contact" element={<InvestorContact />} />
-        </Route>
+        </Route> */}
 
+        <Route path="/services" element={<Services />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/newsroom" element={<Newsroom />} />
         {/* <Route path="*" element={<NotFound />} /> */}
