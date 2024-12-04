@@ -7,6 +7,7 @@ import Pillars from "../components/Pillars";
 import Solutions from "../components/Solutions";
 import { useState } from "react";
 import { useModal } from "@/context/ModalContext";
+// import NewsFeed from "@/components/NewsFeed";
 
 const Home = () => {
   const { openSheet } = useModal();
@@ -25,6 +26,7 @@ const Home = () => {
       <Pillars />
       <Experience />
       <Consultant />
+      {/* <NewsFeed /> */}
     </div>
   );
 };

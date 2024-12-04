@@ -13,6 +13,10 @@ interface Props {
 const SolutionDetails: React.FC<Props> = ({ selectedItem: item }) => {
   const { isOpen, closeSheet } = useModal();
 
+  if (!item) {
+    return null;
+  }
+
   return (
     <Dialog open={isOpen} onOpenChange={(state) => !state && closeSheet()}>
       <DialogContent className="sm:max-w-2xl p-8">
