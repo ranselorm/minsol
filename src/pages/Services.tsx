@@ -1,5 +1,5 @@
 // components/Sustainability.tsx
-import React from "react";
+import React, { useEffect } from "react";
 import Pillars from "../components/Pillars";
 import SustainabilityCard from "../components/SustainabilityCard";
 import Consultant from "../components/Consultant";
@@ -45,6 +45,9 @@ const sections = [
 ];
 
 const Services: React.FC = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <section>
       {sections.map((section, index) => (

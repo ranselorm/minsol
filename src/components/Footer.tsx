@@ -5,34 +5,52 @@ import { Link } from "react-router-dom";
 
 const footerLinks = {
   company: [
-    { label: "Contact", url: "/contact" },
-    { label: "Privacy policies", url: "/privacy" },
-    { label: "Data Governance Statement", url: "/data-governance" },
-    { label: "Cookie Policy", url: "/cookie-policy" },
-    { label: "Terms of Use", url: "/terms-of-use" },
+    { label: "Home", url: "/" },
+    { label: "About Us", url: "/about" },
+    { label: "Services", url: "/services" },
+    { label: "Products", url: "/products" },
+    // { label: "Contact", url: "/contact" },
   ],
   socialMedia: [
-    { label: "Instagram", icon: "mdi:instagram", url: "https://instagram.com" },
-    { label: "LinkedIn", icon: "mdi:linkedin", url: "https://linkedin.com" },
-    { label: "Twitter", icon: "mdi:twitter", url: "https://twitter.com" },
-    { label: "Facebook", icon: "mdi:facebook", url: "https://facebook.com" },
+    {
+      label: "Instagram",
+      icon: "iconoir:instagram",
+      url: "https://instagram.com",
+    },
+    { label: "LinkedIn", icon: "circum:linkedin", url: "#" },
+    { label: "Twitter", icon: "pajamas:twitter", url: "#" },
+    { label: "Facebook", icon: "circum:facebook", url: "#" },
   ],
-  additional: [
-    { label: "Canal de denuncias", url: "/canal-de-denuncias" },
-    { label: "Whistleblower Channel", url: "/whistleblower-channel" },
-    { label: "投诉渠道", url: "/complaint-channel" },
+  contact: [
+    { label: "info@minsolltd.com", icon: "mdi-light:email" },
+    {
+      label: "+233 30 254 3667",
+      icon: "mdi-light:phone",
+    },
+    {
+      label: "4 Apple Avenue",
+      icon: "fluent:street-sign-24-regular",
+    },
+    {
+      label: "East Legon, Accra",
+      icon: "iconoir:city",
+    },
   ],
 };
 
 const Footer: React.FC = () => (
   <footer className="bg-black text-white py-8 px-4 md:px-28">
     <div className="max-w-screen-xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
-      <Link to="/" className="text-lg font-bold inline-flex">
-        <img src="/images/logo.svg" className="w-[40%] md:w-[80%]" />
+      <Link to="/" className="md:w-full h-20">
+        <img
+          src="/images/sol.png"
+          className="w-full h-full object-cover"
+          alt="Logo"
+        />
       </Link>
 
       <div>
-        <h3 className="text-lg font-semibold mb-4">ME Elecmetal</h3>
+        <h3 className="text-lg font-semibold mb-4">Popular Links</h3>
         <ul className="space-y-2">
           {footerLinks.company.map((link, index) => (
             <li key={index}>
@@ -68,23 +86,21 @@ const Footer: React.FC = () => (
       </div>
 
       <div>
+        <h3 className="text-lg font-semibold mb-4">Contact</h3>
         <ul className="space-y-2">
-          {footerLinks.additional.map((link, index) => (
-            <li key={index}>
-              <Link
-                to={link.url}
-                className="hover:text-gray-300 flex items-center"
-              >
-                {link.label}{" "}
-                <Icon icon="mdi:arrow-right" width="16" className="ml-2" />
-              </Link>
+          {footerLinks.contact.map((link, index) => (
+            <li key={index} className="flex">
+              <Icon icon={link.icon} width="20" className="mr-2" />
+              <p className="hover:text-gray-300 flex items-center">
+                {link.label}
+              </p>
             </li>
           ))}
         </ul>
       </div>
     </div>
     <div className="border-t border-gray-700 mt-8 pt-4 text-center text-sm text-gray-400">
-      © 2024, ME Elecmetal or its affiliates. All rights reserved.
+      © 2024 Minsol. All rights reserved.
     </div>
   </footer>
 );

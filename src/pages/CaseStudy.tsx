@@ -1,5 +1,5 @@
 // components/CaseStudy.tsx
-import React from "react";
+import React, { useEffect } from "react";
 import Consultant from "../components/Consultant";
 import Clients from "@/components/Clients";
 import News from "@/components/News";
@@ -55,6 +55,9 @@ import News from "@/components/News";
 // ];
 
 const CaseStudy: React.FC = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <section className="bg-gray-100">
       <div className="container mx-auto">
@@ -148,9 +151,9 @@ const CaseStudy: React.FC = () => {
             </div>
           </div>
         </div>
-        <Clients />
-        <News />
       </div>
+      <News />
+      <Clients />
       <Consultant />
     </section>
   );
