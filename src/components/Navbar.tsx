@@ -85,9 +85,9 @@ const Navbar: React.FC = () => {
       <nav className="bg-white text-black py-4 relative">
         <div className="px-4 md:px-20 container mx-auto">
           <div className="flex justify-between items-center">
-            <Link to="/" className="md:w-40 h-12">
+            <Link to="/" className="md:w-40 md:h-16 h-20">
               <img
-                src="/images/sol.png"
+                src="/images/min.png"
                 className="w-full h-full object-cover"
                 alt="Logo"
               />

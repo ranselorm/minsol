@@ -3,7 +3,7 @@ import React, { useEffect } from "react";
 import Consultant from "../components/Consultant";
 import Clients from "@/components/Clients";
 import News from "@/components/News";
-import Table from "@/components/Table";
+import SplitTable from "@/components/SplitTable";
 
 // const caseStudy = [
 //   {
@@ -122,7 +122,7 @@ const CaseStudy: React.FC = () => {
                 hot-dipped galvanized finishes, the tapered end facilitates easy
                 insertion.
               </p>
-              <Table />
+              <SplitTable />
             </div>
             <div>
               <h2 className="text-2xl mb-2">Wielded Mesh</h2>

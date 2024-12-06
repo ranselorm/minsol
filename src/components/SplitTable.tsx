@@ -31,7 +31,7 @@ const tableData = [
   { header: "Steel Thickness", measurements: ["3.2mm", "2.3mm", "2.3mm"] },
 ];
 
-const TableComponent: React.FC = () => {
+const SplitTable: React.FC = () => {
   // Assuming each measurement category has the same number of rows
   const maxRows = Math.max(
     ...tableData.map((data) => data.measurements.length)
@@ -67,4 +67,4 @@ const TableComponent: React.FC = () => {
   );
 };
 
-export default TableComponent;
+export default SplitTable;
