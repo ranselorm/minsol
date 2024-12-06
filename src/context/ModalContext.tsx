@@ -18,7 +18,6 @@ export const ModalProvider: React.FC<{ children: ReactNode }> = ({
 }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
-  const [item, setItem] = useState<any>("");
 
   const openSheet = () => setIsOpen(true);
   const closeSheet = () => setIsOpen(false);

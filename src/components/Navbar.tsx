@@ -57,6 +57,7 @@ const links = [
   },
   { label: "About Us", path: "/about" },
   { label: "Services", path: "/services" },
+  { label: "Products", path: "/products" },
   // { label: "Case Studies", path: "/case-study" },
   // { label: "Sustainability", path: "/sustainability" },
   // { label: "Investors", path: "/investors" },
@@ -81,7 +82,7 @@ const Navbar: React.FC = () => {
 
   return (
     <>
-      <nav className="bg-gray-100 text-black py-4 relative">
+      <nav className="bg-white text-black py-4 relative">
         <div className="px-4 md:px-20 container mx-auto">
           <div className="flex justify-between items-center">
             <Link to="/" className="md:w-40 h-12">
@@ -92,7 +93,7 @@ const Navbar: React.FC = () => {
               />
             </Link>
 
-            <div className="hidden md:flex items-center space-x-6">
+            <div className="hidden md:flex items-center space-x-8">
               {links.map((link, index) => (
                 <div key={index} className="relative">
                   {link.subItems ? (

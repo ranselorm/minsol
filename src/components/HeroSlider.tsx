@@ -8,7 +8,7 @@ const slides = [
     image: "/images/banner1.jpg",
     title: "Welcome to Minsol Limited",
     description:
-      "your premier partner in consultancy and logistics for the mineral resources industry. We specialize in providing innovative solutions across a broad spectrum of services",
+      "Your premier partner in consultancy and logistics for the mineral resources industry. We specialize in providing innovative solutions across a broad spectrum of services",
     buttonText: "Learn More",
     link: "#",
   },
@@ -25,6 +25,14 @@ const slides = [
     title: "Training for Mining/Processing Personnel",
     description:
       "Specialized programs to enhance the skills and safety of operational teams",
+    buttonText: "ME FIT Grinding",
+    link: "#",
+  },
+  {
+    image: "/images/banner2.png",
+    title: "Technical and Engineering Services",
+    description:
+      "Comprehensive engineering, procurement, and construction management (EPCM) solutions.",
     buttonText: "ME FIT Grinding",
     link: "#",
   },

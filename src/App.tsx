@@ -9,10 +9,10 @@ import Compliance from "./pages/Compliance";
 import Affiliates from "./pages/Affiliates";
 import CaseStudy from "./pages/CaseStudy";
 import Sustainability from "./pages/Sustainability";
-import Investors from "./pages/Investors";
-import AnnualReports from "./pages/AnnualReports";
-import CorporateAffairs from "./pages/CorporateAffairs";
-import InvestorContact from "./pages/InvestorsContact";
+// import Investors from "./pages/Investors";
+// import AnnualReports from "./pages/AnnualReports";
+// import CorporateAffairs from "./pages/CorporateAffairs";
+// import InvestorContact from "./pages/InvestorsContact";
 import Solutions from "./pages/Solutions";
 import MeFitGrinding from "./pages/MeFitGrinding";
 import Newsroom from "./pages/Newsroom";
@@ -38,7 +38,7 @@ function App() {
           <Route path="affiliates" element={<Affiliates />} />
         </Route>
 
-        <Route path="case-study" element={<CaseStudy />} />
+        <Route path="products" element={<CaseStudy />} />
         <Route path="sustainability" element={<Sustainability />} />
         {/* <Route path="investors" element={<Investors />}>
           <Route path="annual-reports" element={<AnnualReports />} />

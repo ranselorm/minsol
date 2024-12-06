@@ -11,8 +11,8 @@ interface CaseStudyCardProps {
 const CaseStudyCard: React.FC<CaseStudyCardProps> = ({
   image,
   title,
-  description,
-  link,
+  // description,
+  // link,
 }) => {
   return (
     <div className="bg-white shadow-md rounded-md overflow-hidden flex flex-col w-full lg:w-[350px]">
@@ -24,14 +24,10 @@ const CaseStudyCard: React.FC<CaseStudyCardProps> = ({
         />
       </div>
       <div className="p-4 flex-1 flex flex-col">
-        <h3 className="text-base font-semibold text-blu mb-2">{title}</h3>
-        <p className="text-grey text-sm flex-1">{description}</p>
-        <a
-          href={link}
-          className="text-orange-600 font-medium mt-4 hover:underline"
-        >
-          More &gt;
-        </a>
+        <h3 className="text-base font-semibold text-blu mb-2 capitalize">
+          {title}
+        </h3>
+        {/* <p className="text-grey text-sm flex-1">{description}</p> */}
       </div>
     </div>
   );

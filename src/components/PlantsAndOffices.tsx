@@ -1,4 +1,3 @@
-import { useModal } from "@/context/ModalContext";
 import React, { useState } from "react";
 
 // const stats = [
@@ -16,7 +15,6 @@ import React, { useState } from "react";
 
 const PlantsAndOffices: React.FC = () => {
   const [isMapLoaded, setIsMapLoaded] = useState(false);
-  const { openModal } = useModal();
 
   return (
     <section className="py-8 bg-white text-grey">
