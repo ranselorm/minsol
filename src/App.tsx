@@ -1,7 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About";
-import Contact from "./pages/Contact";
+// import Contact from "./pages/Contact";
 import AboutLayout from "./components/AboutLayout";
 import History from "./pages/History";
 import PlantsAndOfficesPage from "./pages/PlantsAndOfficesPage";
@@ -47,7 +47,7 @@ function App() {
         </Route> */}
 
         <Route path="/services" element={<Services />} />
-        <Route path="/contact" element={<Contact />} />
+        {/* <Route path="/contact" element={<Contact />} /> */}
         <Route path="/newsroom" element={<Newsroom />} />
         {/* <Route path="*" element={<NotFound />} /> */}
       </Routes>
