@@ -72,7 +72,7 @@ const Solutions: React.FC<SolutionsProps> = ({ onSolutionClick }) => {
                 </div>
                 <Link
                   to="#"
-                  className="mt-auto inline-block font-semibold border border-gray-100 px-4 py-2 rounded-lg text-sm text-white hover:bg-gray-100 hover:text-blue-800 transition-colors duration-300 text-center"
+                  className="mt-auto inline-block font-semibold border border-main px-4 py-2 rounded-lg text-sm text-white hover:bg-main transition-colors duration-150 text-center"
                   onClick={() => onSolutionClick(solution)}
                 >
                   {solution.buttonText} &rarr;
