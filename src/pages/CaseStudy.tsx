@@ -3,6 +3,7 @@ import React, { useEffect } from "react";
 import Consultant from "../components/Consultant";
 import Clients from "@/components/Clients";
 import News from "@/components/News";
+import Table from "@/components/Table";
 
 // const caseStudy = [
 //   {
@@ -80,7 +81,7 @@ const CaseStudy: React.FC = () => {
               />
             </div>
 
-            <p className="leading-relaxed text-grey my-3">
+            <p className="leading-relaxed text-grey my-3 text-lg">
               We provide robust mining and ground support solutions, including
               high-quality welded mesh and split set products. Our welded mesh
               offers superior stability and reinforcement for underground mine
@@ -105,7 +106,7 @@ const CaseStudy: React.FC = () => {
                   className="md:w-full h-[300px] md:h-[450px] object-cover rounded"
                 />
               </div>
-              <p className="leading-relaxed text-grey my-3">
+              <p className="leading-relaxed text-grey my-3 text-lg mb-6">
                 Our Split Sets are crafted from high-tensile steel, roll-formed
                 into a tubular section with a continuous longitudinal opening.
                 An 8mm steel ring is fixed 5mm from the collar end of the tube.
@@ -121,10 +122,11 @@ const CaseStudy: React.FC = () => {
                 hot-dipped galvanized finishes, the tapered end facilitates easy
                 insertion.
               </p>
+              <Table />
             </div>
             <div>
               <h2 className="text-2xl mb-2">Wielded Mesh</h2>
-              <div className="flex flex-col md:flex-row gap-6 mb-6">
+              <div className="mb-6">
                 <img
                   src="/images/mesh.jpg"
                   alt=""
@@ -132,7 +134,7 @@ const CaseStudy: React.FC = () => {
                 />
               </div>
 
-              <p className="leading-relaxed text-grey my-3">
+              <p className="leading-relaxed text-grey my-3 text-lg">
                 Minsol manufactures and supplies Mining Mesh (Welded Mesh) for
                 permanent surface coverage in underground excavations. This mesh
                 can be installed with roof bolts, split sets, or other supports,

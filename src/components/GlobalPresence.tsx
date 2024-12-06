@@ -1,4 +1,6 @@
 import React from "react";
+import News from "./News";
+import Clients from "./Clients";
 
 const GlobalPresence: React.FC = () => {
   return (
@@ -6,12 +8,12 @@ const GlobalPresence: React.FC = () => {
       <div className="container mx-auto px-4 md:px-20">
         {/* Header */}
         <div className="mb-12">
-          <h2 className="text-4xl font-semibold mb-4 max-w-xl leading-tight">
-            We are present in more than 40 countries worldwide
+          <h2 className="text-4xl font-semibold mb-4 leading-tight">
+            We are present in more than 4 countries worldwide
           </h2>
         </div>
 
-        <div className="flex gap-y-12">
+        {/* <div className="flex gap-y-12">
           <div className="relative w-full max-w-lg">
             <input
               type="text"
@@ -25,8 +27,10 @@ const GlobalPresence: React.FC = () => {
               🔍
             </button>
           </div>
-        </div>
+        </div> */}
       </div>
+      <News />
+      <Clients />
     </section>
   );
 };

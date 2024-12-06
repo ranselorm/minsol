@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 // const stats = [
 //   {
@@ -14,7 +14,7 @@ import React, { useState } from "react";
 // ];
 
 const PlantsAndOffices: React.FC = () => {
-  const [isMapLoaded, setIsMapLoaded] = useState(false);
+  // const [isMapLoaded, setIsMapLoaded] = useState(false);
 
   return (
     <section className="py-8 bg-white text-grey">
@@ -43,7 +43,7 @@ const PlantsAndOffices: React.FC = () => {
         </div> */}
 
         {/* Map Section */}
-        <div className="relative bg-white w-full h-[400px] border-0">
+        {/* <div className="relative bg-white w-full h-[400px] border-0">
           {!isMapLoaded && (
             <div className="absolute inset-0 flex justify-center items-center bg-gray-100">
               <p className="text-gray-500">Loading map...</p>
@@ -57,7 +57,7 @@ const PlantsAndOffices: React.FC = () => {
             loading="lazy"
             title="4 Apple Avenue Map"
           ></iframe>
-        </div>
+        </div> */}
         {/* <div>
           <button
             onClick={openModal} //desktop
@@ -66,6 +66,14 @@ const PlantsAndOffices: React.FC = () => {
             Contact Us
           </button>
         </div> */}
+
+        <div className="mb-6">
+          <img
+            src="/images/map.png"
+            alt=""
+            className="md:w-full h-[300px] md:h-[450px] object-cover rounded"
+          />
+        </div>
       </div>
     </section>
   );

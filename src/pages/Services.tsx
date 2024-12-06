@@ -39,7 +39,7 @@ const sections = [
     description:
       "Our expert tenement administration services ensure efficient and legally compliant management of mineral exploration. We provide meticulous oversight and administration of tenements, ensuring full compliance with legislative requirements and maintaining operational efficiency. We handle the preparation and lodgement of applications, renewals, and reductions for all exploration tenures. Our team consults closely with clients to tailor processes to specific needs",
     linkUrl: "#",
-    bgColor: "bg-gray-100",
+    bgColor: "bg-white",
     reverse: true,
   },
 ];

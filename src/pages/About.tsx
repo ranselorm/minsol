@@ -4,6 +4,7 @@ import Vision from "../components/Vision";
 import TabbedLayout from "../components/TabbedLayout";
 import News from "../components/News";
 import Consultant from "../components/Consultant";
+import Clients from "@/components/Clients";
 
 const stats = [
   {
@@ -72,6 +73,7 @@ const About: React.FC = () => {
       <Vision />
       <TabbedLayout />
       <News />
+      <Clients />
       <Consultant />
     </section>
   );
