@@ -1,8 +1,6 @@
 // components/CaseStudy.tsx
 import React, { useEffect } from "react";
-import Consultant from "../components/Consultant";
 import Clients from "@/components/Clients";
-import News from "@/components/News";
 import SplitTable from "@/components/SplitTable";
 import { Icon } from "@iconify/react/dist/iconify.js";
 
@@ -57,9 +55,9 @@ import { Icon } from "@iconify/react/dist/iconify.js";
 // ];
 
 const Products: React.FC = () => {
-  // useEffect(() => {
-  //   window.scrollTo(0, 0);
-  // }, []);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <section className="bg-gray-100">
       <div className="container mx-auto">

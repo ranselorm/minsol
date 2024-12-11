@@ -23,31 +23,31 @@ const dropdownData = [
       },
     ],
   },
-  {
-    title: "Products and Services",
-    items: [
-      {
-        name: "Crushing",
-        description: "Description for Crushing",
-        link: "/solutions/crushing",
-      },
-      {
-        name: "Grinding",
-        description: "Description for Grinding",
-        link: "/solutions/grinding",
-      },
-      {
-        name: "Grinding Media",
-        description: "Description for Grinding Media",
-        link: "/solutions/grinding-media",
-      },
-      {
-        name: "Digital Solutions",
-        description: "Description for Digital Solutions",
-        link: "/solutions/digital-solutions",
-      },
-    ],
-  },
+  // {
+  //   title: "Products and Services",
+  //   items: [
+  //     {
+  //       name: "Crushing",
+  //       description: "Description for Crushing",
+  //       link: "/solutions/crushing",
+  //     },
+  //     {
+  //       name: "Grinding",
+  //       description: "Description for Grinding",
+  //       link: "/solutions/grinding",
+  //     },
+  //     {
+  //       name: "Grinding Media",
+  //       description: "Description for Grinding Media",
+  //       link: "/solutions/grinding-media",
+  //     },
+  //     {
+  //       name: "Digital Solutions",
+  //       description: "Description for Digital Solutions",
+  //       link: "/solutions/digital-solutions",
+  //     },
+  //   ],
+  // },
 ];
 
 const links = [
@@ -109,7 +109,7 @@ const Navbar: React.FC = () => {
                         />
                       </button>
                       {activeDropdown === index && (
-                        <div className="absolute left-0 top-full bg-blu text-white z-50 p-8 grid grid-cols-2 gap-8 w-[700px] h-auto rounded-b-lg">
+                        <div className="absolute left-0 top-10 bg-blu text-white z-50 p-8 gap-8 w-[700px] h-auto rounded-b-lg">
                           {link.subItems.map((section, sectionIndex) => (
                             <div key={sectionIndex}>
                               <h4 className="font-bold text-lg mb-4">
@@ -121,7 +121,7 @@ const Navbar: React.FC = () => {
                                   <p className="text-sm">{item.description}</p>
                                   <Link
                                     to={item.link}
-                                    className="text-orange-500 hover:underline"
+                                    className="text-secondary hover:underline"
                                     onClick={() => setActiveDropdown(null)}
                                   >
                                     Learn More →

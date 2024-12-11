@@ -8,7 +8,6 @@ const PlantsAndOfficesPage = () => {
       <PlantsAndOffices />
       <GlobalPresence />
       {/* <Accordion /> */}
-      <Consultant />
     </div>
   );
 };
