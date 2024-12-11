@@ -140,21 +140,21 @@ const Navbar: React.FC = () => {
                   )}
                 </div>
               ))}
-              <button
-                onClick={openModal} //desktop
-                className="bg-main px-4 py-2 rounded-lg text-white hover:bg-orange-700"
-              >
-                Contact Us
-              </button>
             </div>
 
             {/* Desktop Sidebar Menu Button */}
-            <button
+            {/* <button
               className="hidden md:block text-2xl"
               onClick={toggleDrawer}
               aria-label="Toggle Side Drawer"
             >
               <Icon icon="mdi:menu" width="30" />
+            </button> */}
+            <button
+              onClick={openModal} //desktop
+              className="bg-main px-4 py-2 rounded-lg text-white hover:bg-orange-700"
+            >
+              Contact Us
             </button>
 
             {/* Mobile Menu Button */}
