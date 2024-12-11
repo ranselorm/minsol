@@ -40,7 +40,7 @@ const footerLinks = {
 
 const Footer: React.FC = () => (
   <footer className="bg-black text-white py-8 px-4 md:px-28">
-    <div className="max-w-screen-xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+    <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
       <Link to="/" className="md:w-full h-20">
         <img
           src="/images/sol.png"
@@ -66,7 +66,7 @@ const Footer: React.FC = () => (
         </ul>
       </div>
 
-      <div>
+      {/* <div>
         <h3 className="text-lg font-semibold mb-4">Social Media</h3>
         <ul className="space-y-2">
           {footerLinks.socialMedia.map((link, index) => (
@@ -83,7 +83,7 @@ const Footer: React.FC = () => (
             </li>
           ))}
         </ul>
-      </div>
+      </div> */}
 
       <div>
         <h3 className="text-lg font-semibold mb-4">Contact</h3>

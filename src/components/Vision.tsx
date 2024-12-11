@@ -4,34 +4,37 @@ import React from "react";
 
 const Vision: React.FC = () => {
   return (
-    <section className="flex flex-col md:flex-row justify-between items-stretch py-10 w-full">
+    <section className="flex flex-col md:flex-row justify-between items-stretch py-10 w-full font-primary">
       <div className="flex-1 bg-white w-full ">
         <div className="flex flex-col container mx-auto">
           <div className="px-4 md:px-20 py-8">
             <h3 className="text-2xl mb-4 text-left">Vision</h3>
-            <p className="text-left text-grey font-medium text-base">
-              ME Elecmetal will be a globally competitive supplier recognized
-              for excellence and leadership in the sustainable delivery of
-              integral solutions that add value to mining processes and other
-              target markets.
+            <p className="text-left text-grey leading-relaxed">
+              To be the leading provider of innovative mining consultancy and
+              services across Sub-Saharan Africa, delivering exceptional value
+              and sustainable solutions to meet the evolving needs of the
+              mineral resources sector. Through excellence, innovation, and
+              strategic presence, we aim to revolutionize the mining industry
+              and empower our clients for long-term success.
             </p>
           </div>
         </div>
         <div className="px-4 md:px-20 py-8">
           <h3 className="text-2xl mb-4 text-left">Mission</h3>
-          <p className="text-left text-grey font-medium text-base">
-            To satisfy the needs and exceed the expectations of its customers,
-            employees, suppliers, shareholders, and the community through
-            excellence in the sustainable delivery of integral solutions to the
-            market.
+          <p className="text-left text-grey leading-relaxed">
+            At Minsol Limited, our mission is to deliver top-tier mining
+            consultancy and logistics services that drive operational excellence
+            and innovation. We are dedicated to understanding and addressing the
+            unique challenges of the mining industry, providing solutions that
+            ensure efficiency, compliance, and growth for our clients.
           </p>
         </div>
       </div>
 
       {/* Values Column */}
       <div className="flex-1 bg-blu text-white w-full px-4 md:px-8 py-8">
-        <h3 className="text-2xl mb-5 font-bold">Our Values</h3>
-        <div className="flex flex-col gap-y-5 text-[15px]">
+        <h3 className="text-2xl mb-5">Our Values</h3>
+        <div className="flex flex-col gap-y-8 text-[15px]">
           <div className="flex items-start gap-x-1">
             <Icon icon="carbon:checkmark-filled" className="w-10 mt-1" />
             <p className="text-left">
@@ -67,10 +70,11 @@ const Vision: React.FC = () => {
           <div className="flex items-start gap-x-1">
             <Icon icon="carbon:checkmark-filled" className="w-10 mt-1" />
             <p className="text-left">
-              <span className="mr-1">Collaboration:</span> We are dedicated to
-              promoting sustainable practices in all aspects of our operations.
-              We aim to contribute to the long-term health of the mining
-              industry and the communities we serve
+              <span className="mr-1">Sustainability:</span> We prioritize
+              sustainability by focusing on environmental care, social
+              responsibility, and economic growth. Our goal is to support the
+              mining industry's long-term health and the well-being of
+              communities.
             </p>
           </div>
         </div>
