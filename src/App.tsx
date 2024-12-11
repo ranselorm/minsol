@@ -3,10 +3,10 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 // import Contact from "./pages/Contact";
 import AboutLayout from "./components/AboutLayout";
-import History from "./pages/History";
+// import History from "./pages/History";
 import PlantsAndOfficesPage from "./pages/PlantsAndOfficesPage";
 import Compliance from "./pages/Compliance";
-import Affiliates from "./pages/Affiliates";
+// import Affiliates from "./pages/Affiliates";
 import CaseStudy from "./pages/CaseStudy";
 import Sustainability from "./pages/Sustainability";
 // import Investors from "./pages/Investors";
@@ -19,6 +19,7 @@ import Newsroom from "./pages/Newsroom";
 import ContactModal from "./components/ContactModal";
 import MeFitCrushing from "./pages/MeFitCrushing";
 import Services from "./pages/Services";
+import NotFound from "./pages/NotFound";
 
 function App() {
   return (
@@ -32,10 +33,10 @@ function App() {
         </Route>
         <Route path="about" element={<AboutLayout />}>
           <Route path="/about" element={<About />} />
-          <Route path="history" element={<History />} />
+          {/* <Route path="history" element={<History />} /> */}
           <Route path="plants-and-offices" element={<PlantsAndOfficesPage />} />
           <Route path="compliance" element={<Compliance />} />
-          <Route path="affiliates" element={<Affiliates />} />
+          {/* <Route path="affiliates" element={<Affiliates />} /> */}
         </Route>
 
         <Route path="products" element={<CaseStudy />} />
@@ -50,6 +51,7 @@ function App() {
         {/* <Route path="/contact" element={<Contact />} /> */}
         <Route path="/newsroom" element={<Newsroom />} />
         {/* <Route path="*" element={<NotFound />} /> */}
+        <Route path="*" element={<NotFound />} />
       </Routes>
       <ContactModal />
     </>

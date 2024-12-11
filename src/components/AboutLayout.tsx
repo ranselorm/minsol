@@ -17,12 +17,12 @@ const AboutLayout: React.FC = () => {
             >
               About Us
             </NavLink>
-            <NavLink
+            {/* <NavLink
               to="history"
               className={({ isActive }) => (isActive ? "font-bold" : "")}
             >
               History
-            </NavLink>
+            </NavLink> */}
             <NavLink
               to="plants-and-offices"
               className={({ isActive }) => (isActive ? "font-bold" : "")}
@@ -35,12 +35,12 @@ const AboutLayout: React.FC = () => {
             >
               Compliance
             </NavLink>
-            <NavLink
+            {/* <NavLink
               to="affiliates"
               className={({ isActive }) => (isActive ? "font-bold" : "")}
             >
               Affiliates
-            </NavLink>
+            </NavLink> */}
           </div>
         </div>
       </nav>
