@@ -218,32 +218,6 @@ const Products: React.FC = () => {
 
               <div className="flex flex-col md:flex-row">
                 <div className="md:w-2/6 justify-center">
-                  <h2 className="text-xl mb-2 mt-6">Mining Reagents</h2>
-                  <ul>
-                    <li className="leading-relaxed text-grey text-lg flex items-center gap-x-2 mb-2">
-                      <Icon
-                        icon="lets-icons:check-fill"
-                        className="text-main"
-                      />
-                      Activated Carbon
-                    </li>
-                    <li className="leading-relaxed text-grey text-lg flex items-center gap-x-2 mb-2">
-                      <Icon
-                        icon="lets-icons:check-fill"
-                        className="text-main"
-                      />
-                      Sodium Cyanide
-                    </li>
-                    <li className="leading-relaxed text-grey text-lg flex items-center gap-x-2 mb-2">
-                      <Icon
-                        icon="lets-icons:check-fill"
-                        className="text-main"
-                      />
-                      Hydrogen Peroxide
-                    </li>
-                  </ul>
-                </div>
-                <div className="md:w-2/6 justify-center">
                   <h2 className="text-xl mb-2 mt-6">Industrial Chemicals</h2>
                   <ul>
                     <li className="leading-relaxed text-grey text-lg flex items-center gap-x-2 mb-2">
@@ -287,6 +261,32 @@ const Products: React.FC = () => {
                         className="text-main"
                       />
                       Sodium Silicate
+                    </li>
+                  </ul>
+                </div>
+                <div className="md:w-2/6 justify-center">
+                  <h2 className="text-xl mb-2 mt-6">Mining Reagents</h2>
+                  <ul>
+                    <li className="leading-relaxed text-grey text-lg flex items-center gap-x-2 mb-2">
+                      <Icon
+                        icon="lets-icons:check-fill"
+                        className="text-main"
+                      />
+                      Activated Carbon
+                    </li>
+                    <li className="leading-relaxed text-grey text-lg flex items-center gap-x-2 mb-2">
+                      <Icon
+                        icon="lets-icons:check-fill"
+                        className="text-main"
+                      />
+                      Sodium Cyanide
+                    </li>
+                    <li className="leading-relaxed text-grey text-lg flex items-center gap-x-2 mb-2">
+                      <Icon
+                        icon="lets-icons:check-fill"
+                        className="text-main"
+                      />
+                      Hydrogen Peroxide
                     </li>
                   </ul>
                 </div>
