@@ -2,7 +2,6 @@
 import React, { useEffect } from "react";
 import Pillars from "../components/Pillars";
 import SustainabilityCard from "../components/SustainabilityCard";
-import Consultant from "../components/Consultant";
 import News from "../components/News";
 
 const sections = [
@@ -17,7 +16,7 @@ const sections = [
   },
   {
     imageSrc: "/images/p2.jpg",
-    title: "3.2	Training for Mining Operational Personnel",
+    title: "Training for Mining Operational Personnel",
     description:
       "We offer specialized training for mining operational personnel, including hands-on instruction in equipment operation, safety protocols, and process optimization to enhance skills, ensure compliance, and improve operational efficiency.We offer specialized training for mining operational personnel, partnering with Metcom, the world leader in training and knowledge transfer for mineral grinding circuits. Metcom's comprehensive programs enhance skills, improve grinding efficiency, and reduce costs, covering all aspects of optimizing plant grinding and classification circuits to boost operational performance and ensure safety and compliance",
     linkUrl: "#",
@@ -35,12 +34,21 @@ const sections = [
   },
   {
     imageSrc: "/images/p2.jpg",
-    title: "Tenement Administration: ",
+    title: "Tenement Administration",
     description:
       "Our expert tenement administration services ensure efficient and legally compliant management of mineral exploration. We provide meticulous oversight and administration of tenements, ensuring full compliance with legislative requirements and maintaining operational efficiency. We handle the preparation and lodgement of applications, renewals, and reductions for all exploration tenures. Our team consults closely with clients to tailor processes to specific needs",
     linkUrl: "#",
     bgColor: "bg-white",
     reverse: true,
+  },
+  {
+    imageSrc: "/images/p1.jpg",
+    title: "Manufacturing and Distribution",
+    description:
+      "Our expert tenement administration services ensure efficient and legally compliant management of mineral exploration. We provide meticulous oversight and administration of tenements, ensuring full compliance with legislative requirements and maintaining operational efficiency. We handle the preparation and lodgement of applications, renewals, and reductions for all exploration tenures. Our team consults closely with clients to tailor processes to specific needs",
+    linkUrl: "#",
+    bgColor: "bg-white",
+    reverse: false,
   },
 ];
 
@@ -63,7 +71,6 @@ const Services: React.FC = () => {
       ))}
       <Pillars />
       <News />
-      <Consultant />
     </section>
   );
 };

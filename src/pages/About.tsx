@@ -3,7 +3,6 @@ import React, { useEffect } from "react";
 import Vision from "../components/Vision";
 import TabbedLayout from "../components/TabbedLayout";
 import News from "../components/News";
-import Consultant from "../components/Consultant";
 import Clients from "@/components/Clients";
 
 const stats = [
@@ -14,7 +13,7 @@ const stats = [
     linkHref: "#",
   },
   {
-    value: "1,000+",
+    value: "20+",
     label: "Associates",
     linkText: "",
     linkHref: "",
@@ -74,7 +73,6 @@ const About: React.FC = () => {
       <TabbedLayout />
       <News />
       <Clients />
-      <Consultant />
     </section>
   );
 };

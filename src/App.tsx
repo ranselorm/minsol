@@ -7,7 +7,7 @@ import AboutLayout from "./components/AboutLayout";
 import PlantsAndOfficesPage from "./pages/PlantsAndOfficesPage";
 import Compliance from "./pages/Compliance";
 // import Affiliates from "./pages/Affiliates";
-import CaseStudy from "./pages/CaseStudy";
+import Products from "./pages/Products";
 import Sustainability from "./pages/Sustainability";
 // import Investors from "./pages/Investors";
 // import AnnualReports from "./pages/AnnualReports";
@@ -39,7 +39,7 @@ function App() {
           {/* <Route path="affiliates" element={<Affiliates />} /> */}
         </Route>
 
-        <Route path="products" element={<CaseStudy />} />
+        <Route path="products" element={<Products />} />
         <Route path="sustainability" element={<Sustainability />} />
         {/* <Route path="investors" element={<Investors />}>
           <Route path="annual-reports" element={<AnnualReports />} />

@@ -1,5 +1,4 @@
 import SolutionDetails from "@/components/SolutionDetails";
-import Consultant from "../components/Consultant";
 import Experience from "../components/Experience";
 import HeroSlider from "../components/HeroSlider";
 import News from "../components/News";
@@ -27,7 +26,6 @@ const Home = () => {
       <Pillars />
       <Experience />
       <Clients />
-      <Consultant />
       {/* <NewsFeed /> */}
     </div>
   );
