@@ -1,5 +1,4 @@
 import SolutionDetails from "@/components/SolutionDetails";
-import Experience from "../components/Experience";
 import HeroSlider from "../components/HeroSlider";
 import News from "../components/News";
 import Pillars from "../components/Pillars";
@@ -24,7 +23,7 @@ const Home = () => {
       <SolutionDetails selectedItem={selectedItem} />
       <News />
       <Pillars />
-      <Experience />
+      {/* <Experience /> */}
       <Clients />
       {/* <NewsFeed /> */}
     </div>

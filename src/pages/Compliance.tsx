@@ -1,4 +1,3 @@
-import Consultant from "../components/Consultant";
 import FlexCard from "../components/FlexCard";
 
 const sections = [
@@ -69,7 +68,6 @@ const Compliance = () => {
           reverse={section.reverse}
         />
       ))}
-      <Consultant />
     </div>
   );
 };

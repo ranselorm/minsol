@@ -20,7 +20,7 @@ const stats = [
   },
   {
     value: "5+",
-    label: "Countries around the world",
+    label: "Countries in the sub-region",
     linkText: "See plants and offices >",
     linkHref: "#",
   },

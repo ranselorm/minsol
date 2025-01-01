@@ -9,7 +9,7 @@ const GlobalPresence: React.FC = () => {
         {/* Header */}
         <div className="mb-12">
           <h2 className="text-4xl font-semibold mb-4 leading-tight">
-            We are present in more than 4 countries worldwide
+            We are present in more than 5 countries in the sub-region
           </h2>
         </div>
 

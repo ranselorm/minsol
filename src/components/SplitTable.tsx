@@ -32,13 +32,12 @@ const tableData = [
 ];
 
 const SplitTable: React.FC = () => {
-  // Assuming each measurement category has the same number of rows
   const maxRows = Math.max(
     ...tableData.map((data) => data.measurements.length)
   );
 
   return (
-    <div className="overflow-x-auto">
+    <div className="overflow-x-auto mt-12">
       <Main className="min-w-full">
         <TableCaption>Available Specifications</TableCaption>
         <TableHeader>

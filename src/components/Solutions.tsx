@@ -10,7 +10,16 @@ const solutions = [
     details:
       "We specialize in delivering end-to-end technical and engineering services for mineral processing, including feasibility studies, process design, and optimization. Our comprehensive offerings cover equipment procurement, from sourcing and supplier management to contract negotiation, as well as construction management services, ensuring effective site management, equipment installation, and budget control. We oversee commissioning and provide ongoing support to ensure efficient, safe, and compliant operations throughout the lifecycle of your project, enhancing performance and meeting all regulatory standards.",
     buttonText: "More Information",
-    image: "/images/s1.png",
+    image: "/images/tech.jpg",
+  },
+  {
+    title: "Manufacturing and Distribution",
+    description:
+      "A wide range of high-quality products, from ground support systems and mill liners to grinding media and steel products.",
+    details:
+      "A wide range of high-quality products, from ground support systems and mill liners to grinding media and steel products. Tailored design, fabrication, casting, and machining solutions for custom foundry needs.",
+    buttonText: "More Information",
+    image: "/images/manu.jpg",
   },
   {
     title: "Training for Mining Operational Personnel",
@@ -19,17 +28,17 @@ const solutions = [
     details:
       "We offer specialized training for mining operational personnel, including hands-on instruction in equipment operation, safety protocols, and process optimization to enhance skills, ensure compliance, and improve operational efficiency. We offer specialized training for mining operational personnel, partnering with Metcom, the world leader in training and knowledge transfer for mineral grinding circuits. Metcom's comprehensive programs enhance skills, improve grinding efficiency, and reduce costs, covering all aspects of optimizing plant grinding and classification circuits to boost operational performance and ensure safety and compliance.",
     buttonText: "More Information",
-    image: "/images/s2.jpg",
+    image: "/images/train.jpg",
   },
-  {
-    title: "Logistics and Transportation",
-    description:
-      "We offer comprehensive logistics and transportation services for the mineral processing industry, including supply chain",
-    details:
-      "We offer comprehensive logistics and transportation services for the mineral processing industry, including supply chain management, freight and shipping, transport planning, and fleet management. Our services also encompass the sourcing and delivery of mining and processing consumables, ensuring timely and cost-effective provision of essential materials and equipment while maintaining regulatory compliance and optimizing overall supply chain efficiency.",
-    buttonText: "More Information",
-    image: "/images/s3.png",
-  },
+  // {
+  //   title: "Logistics and Transportation",
+  //   description:
+  //     "We offer comprehensive logistics and transportation services for the mineral processing industry, including supply chain",
+  //   details:
+  //     "We offer comprehensive logistics and transportation services for the mineral processing industry, including supply chain management, freight and shipping, transport planning, and fleet management. Our services also encompass the sourcing and delivery of mining and processing consumables, ensuring timely and cost-effective provision of essential materials and equipment while maintaining regulatory compliance and optimizing overall supply chain efficiency.",
+  //   buttonText: "More Information",
+  //   image: "/images/s3.png",
+  // },
   {
     title: "Tenement Administration",
     description:
@@ -37,7 +46,7 @@ const solutions = [
     details:
       "We offer comprehensive logistics and transportation services for the mineral processing industry, including supply chain management, freight and shipping, transport planning, and fleet management. Our services also encompass the sourcing and delivery of mining and processing consumables, ensuring timely and cost-effective provision of essential materials and equipment while maintaining regulatory compliance and optimizing overall supply chain efficiency.",
     buttonText: "More Information",
-    image: "/images/s4.jpg",
+    image: "/images/tenet.jpg",
   },
 ];
 

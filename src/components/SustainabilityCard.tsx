@@ -25,11 +25,11 @@ const SustainabilityCard: React.FC<SustainabilityCardProps> = ({
         reverse ? "md:flex-row-reverse gap-x-4" : ""
       } ${bgColor}`}
     >
-      <div className="flex-1">
+      <div className="flex-1 overflow-hidden">
         <img
           src={imageSrc}
           alt={title}
-          className="w-full h-[350px] object-cover rounded-lg"
+          className="md:w-[90%] h-[300px] object-cover rounded-lg"
         />
       </div>
       <div className="flex-1 flex flex-col justify-center md:pl-12">

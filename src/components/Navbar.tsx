@@ -86,7 +86,7 @@ const Navbar: React.FC = () => {
         <div className="px-4 md:px-20 container mx-auto">
           <div className="flex justify-between items-center">
             <Link to="/" className="">
-              <img src="/main.png" className="w-40" alt="Logo" />
+              <img src="/images/sol.png" className="w-44" alt="Logo" />
             </Link>
 
             <div className="hidden md:flex items-center space-x-8">
@@ -152,7 +152,7 @@ const Navbar: React.FC = () => {
             </button> */}
             <button
               onClick={openModal} //desktop
-              className="bg-main px-4 py-2 rounded-lg text-white hover:bg-orange-700"
+              className="bg-main px-4 py-2 rounded-lg text-white hover:bg-orange-700 hidden md:flex"
             >
               Contact Us
             </button>
