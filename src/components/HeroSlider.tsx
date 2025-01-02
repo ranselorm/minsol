@@ -13,7 +13,7 @@ const slides = [
     link: "#",
   },
   {
-    image: "/images/banner2.png",
+    image: "/images/manu.jpg",
     title: "Manufacturing and Distribution",
     description:
       "A wide range of high-quality products, from ground support systems and mill liners to grinding media and steel products. Tailored design, fabrication, casting, and machining solutions for custom foundry needs.",
@@ -21,7 +21,7 @@ const slides = [
     link: "#",
   },
   {
-    image: "/images/banner3.jpg",
+    image: "/images/train.jpg",
     title: "Training for Mining/Processing Personnel",
     description:
       "Specialized programs to enhance the skills and safety of operational teams",
@@ -29,7 +29,7 @@ const slides = [
     link: "#",
   },
   {
-    image: "/images/banner2.png",
+    image: "/images/tech.jpg",
     title: "Technical and Engineering Services",
     description:
       "Comprehensive engineering, procurement, and construction management (EPCM) solutions.",
