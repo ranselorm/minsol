@@ -4,6 +4,7 @@ import ProductHero from "@/components/ProductHero";
 import ProductCard from "@/components/ProductCard";
 import ParallaxHero from "@/components/ParallaxHero";
 import Experience from "@/components/Experience";
+import News from "@/components/News";
 
 const products = [
   {
@@ -71,6 +72,7 @@ const Products: React.FC = () => {
       </main>
       <ParallaxHero />
       <Experience />
+      <News />
       <Clients />
     </section>
   );

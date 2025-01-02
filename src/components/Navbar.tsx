@@ -109,7 +109,7 @@ const Navbar: React.FC = () => {
                         />
                       </button>
                       {activeDropdown === index && (
-                        <div className="absolute left-0 top-10 bg-blu text-white z-50 p-8 gap-8 w-[700px] h-auto rounded-b-lg">
+                        <div className="absolute left-0 top-10 bg-main text-white z-50 p-8 gap-8 w-[500px] h-auto rounded-lg">
                           {link.subItems.map((section, sectionIndex) => (
                             <div key={sectionIndex}>
                               <h4 className="font-bold text-lg mb-4">
@@ -173,7 +173,7 @@ const Navbar: React.FC = () => {
 
           {/* Mobile Navigation Menu */}
           {isMenuOpen && (
-            <div className="fixed top-0 right-0 w-[80%] h-full bg-blue-700 text-white z-50 p-6">
+            <div className="fixed top-0 right-0 w-[90%] h-full bg-main text-white z-50 p-6">
               <button
                 className="text-3xl mb-6"
                 onClick={() => setIsMenuOpen(false)}
@@ -233,7 +233,7 @@ const Navbar: React.FC = () => {
                 <li>
                   <button
                     onClick={handleButtonClick}
-                    className="bg-main px-8 py-2 rounded-lg hover:bg-orange-700 w-max text-left"
+                    className="bg-black px-8 py-2 rounded-lg w-max text-left"
                   >
                     Contact Us
                   </button>
